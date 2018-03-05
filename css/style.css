@@ -81,7 +81,7 @@ header {
 }
 
 .date {
-  font-size: 0.7em;
+  font-size: 1em;
   color: #8c8c8c;
 }
 
@@ -99,7 +99,7 @@ header {
 
 .sidebar li,
 .sidebar h4 {
-  font-size: 0.7em;
+  font-size: 1em;
   font-family: "Nunito", sans-serif;
 }
 
@@ -175,6 +175,16 @@ p,
 li {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   line-height: 2;
+  font-size: 1.4em;
+}
+
+h1,
+h3 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 3em;
 }
 
 a,
@@ -196,7 +206,6 @@ a:active {
   max-width: 1200px;
   margin: 100px auto 200px auto;
   padding-top: 100px;
-  font-size: 1.3em;
 }
 
 @media print {
@@ -236,10 +245,6 @@ blockquote {
   blockquote {
     display: none;
   }
-}
-
-h2.headline {
-  font-size: 2em;
 }
 
 figure {
