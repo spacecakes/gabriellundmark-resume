@@ -28,7 +28,9 @@ header {
 .profile p:last-of-type {
   font-size: 2em;
   font-family: "League Script", cursive;
-  margin-bottom: 0;
+  -webkit-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+          transform: rotate(-4deg);
 }
 
 .experience {
