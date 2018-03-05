@@ -9,7 +9,7 @@ header {
     padding: 0;
   }
 }
-.title-headline {
+h1.headline {
   font-size: 5rem;
   @include breakpoint(print) {
     display: block;

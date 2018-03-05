@@ -25,12 +25,12 @@ header {
   }
 }
 
-.title-headline {
+h1.headline {
   font-size: 5rem;
 }
 
 @media print {
-  .title-headline {
+  h1.headline {
     display: block;
     font-size: 2rem;
     margin: auto;
@@ -72,10 +72,10 @@ header {
 
 .title {
   margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .logo {
-  float: right;
   height: 30px;
   display: none;
 }
@@ -178,6 +178,12 @@ li {
   font-size: 1.4em;
 }
 
+.headline {
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  text-align: center;
+}
+
 h1,
 h3 {
   font-size: 2em;
@@ -226,15 +232,10 @@ a:active {
   }
 }
 
-.headline,
-.title-headline,
 blockquote {
-  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   text-align: center;
-}
-
-blockquote {
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   grid-column: 1 /-1;
   font-style: italic;
   font-size: 4em;

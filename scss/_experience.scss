@@ -6,17 +6,20 @@
 }
 .title {
   margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 // Company logos (not used)
 .logo {
-  float: right;
   height: 30px;
   display: none;
 }
-
-.company {
-}
+// .work > .company {
+//   display: none;
+// }
+// .education > .logo {
+//   display: none;
+// }
 .date {
   font-size: 1em;
   color: $second-font-color;
