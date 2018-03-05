@@ -1,8 +1,23 @@
 // Footer
 footer {
-  grid-column: 1 /-1;
-  font-size: 0.6em;
-  color: $main-font-color;
-  text-align: center;
+  display: none;
+  border-top: 2px solid $highlight-color;
+  grid-column: 1/-1;
+  background-color: $sidebar-bg-color;
   padding: 100px;
+  margin-top: 100px;
+  @include breakpoint(print) {
+    display: initial;
+    border: none;
+    grid-column: 2;
+  }
+}
+footer ul {
+  list-style: none;
+  text-align: center;
+}
+footer li {
+  font-family: $sidebar-font;
+  font-size: 12px;
+  padding: 4px;
 }

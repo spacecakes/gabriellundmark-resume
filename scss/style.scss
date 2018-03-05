@@ -1,10 +1,11 @@
 @import "reset";
+@import "mixins";
 @import "variables";
+@import "header";
 @import "profile";
 @import "experience";
 @import "sidebars";
-@import "mediaqueries";
-// @import "footer";
+@import "footer";
 
 p,
 li {
@@ -29,6 +30,10 @@ a:active {
   margin: 100px auto 200px auto;
   padding-top: 100px;
   font-size: 1.3em;
+  @include breakpoint(print) {
+    grid-template-columns: 1fr;
+    margin: auto;
+  }
 }
 
 .wrapper > section {
@@ -45,28 +50,26 @@ blockquote {
   text-align: center;
 }
 
-.title-headline,
 blockquote {
   grid-column: 1 /-1;
-}
-
-.title-headline {
+  font-style: italic;
   font-size: 4em;
+  color: $highlight-color;
+  @include breakpoint(print) {
+    display: none;
+  }
 }
 
 h2.headline {
   font-size: 2em;
 }
-blockquote {
-  font-style: italic;
-  font-size: 4em;
-  color: $highlight-color;
-}
-
 // Images
 figure {
   grid-column: 1 /-1;
   margin: 2em 0 2em 0;
+  @include breakpoint(print) {
+    display: none;
+  }
 }
 figure > img {
   width: 100%;

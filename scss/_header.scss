@@ -1,0 +1,16 @@
+header {
+  grid-column: 1/-1;
+  font-size: 2em;
+  @include breakpoint(print) {
+    grid-column: 2;
+  }
+}
+
+.me {
+  display: block;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  padding: 50px;
+}

@@ -3,6 +3,9 @@
   padding: 1em;
   background-color: $sidebar-bg-color;
   border-radius: 5px;
+  @include breakpoint(print) {
+    display: none;
+  }
 }
 .sidebar li,
 .sidebar h4 {
@@ -27,11 +30,12 @@
 }
 .social-icons {
   width: 35px;
+  margin-top: 10px;
   display: inline-block;
 }
 
 // Relevant skills
-.sidebar.skills {
+.sidebar.relevant-skills {
   align-self: center;
   grid-column: 1;
   grid-row: 5 / span 5;
