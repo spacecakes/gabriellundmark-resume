@@ -15,8 +15,9 @@ body {
 }
 
 .profile p:last-of-type {
-  font-size: 1.5em;
+  font-size: 3em;
   font-family: "League Script", cursive;
+  margin-bottom: 0;
 }
 
 .experience {
@@ -44,8 +45,6 @@ body {
 
 .sidebar {
   padding: 1em;
-  -ms-flex-item-align: center;
-      align-self: center;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
 }
@@ -65,6 +64,8 @@ body {
   grid-column: 3;
   grid-row-start: 2;
   border-left: 2px solid #76b4c8;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .sidebar.contact ul {
@@ -72,7 +73,7 @@ body {
   padding: 0;
 }
 
-.social {
+.social-icons {
   width: 35px;
   display: inline-block;
 }
@@ -89,6 +90,17 @@ body {
   -ms-flex-item-align: center;
       align-self: center;
   border-left: 2px solid #76b4c8;
+}
+
+@media print {
+  .sidebar,
+  figure,
+  blockquote {
+    display: none;
+  }
+  .title-headline {
+    font-size: 2em;
+  }
 }
 
 p,
@@ -153,6 +165,7 @@ blockquote {
 
 figure {
   grid-column: 1 /-1;
+  margin: 2em 0 2em 0;
 }
 
 figure > img {

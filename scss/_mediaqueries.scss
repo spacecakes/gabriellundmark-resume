@@ -1,0 +1,12 @@
+@media print {
+  .sidebar,
+  figure,
+  blockquote {
+    display: none;
+  }
+  .title-headline {
+    font-size: 2em;
+  }
+  .resume {
+  }
+}

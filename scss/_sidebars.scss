@@ -1,7 +1,6 @@
 // General sidebar
 .sidebar {
   padding: 1em;
-  align-self: center;
   background-color: $sidebar-bg-color;
   border-radius: 5px;
 }
@@ -20,12 +19,13 @@
   grid-column: 3;
   grid-row-start: 2;
   border-left: 2px solid $highlight-color;
+  align-self: center;
 }
 .sidebar.contact ul {
   list-style: none;
   padding: 0;
 }
-.social {
+.social-icons {
   width: 35px;
   display: inline-block;
 }
