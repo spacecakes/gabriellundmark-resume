@@ -58,6 +58,7 @@ blockquote {
   font-style: italic;
   font-size: 4em;
   color: $highlight-color;
+
   @include breakpoint(print) {
     display: none;
   }

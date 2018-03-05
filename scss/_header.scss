@@ -1,15 +1,20 @@
 header {
   grid-column: 1/-1;
+
   @include breakpoint(print) {
-    grid-column: 2;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    grid-column: 2;
+    padding: 0;
   }
 }
 .title-headline {
   font-size: 5rem;
   @include breakpoint(print) {
+    display: block;
     font-size: 2rem;
+    margin: auto;
   }
 }
 
@@ -21,7 +26,8 @@ header {
   margin: auto;
   padding: 50px;
   @include breakpoint(print) {
-    height: 100px;
+    height: 70px;
     width: auto;
+    margin: initial;
   }
 }

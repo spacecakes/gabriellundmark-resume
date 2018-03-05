@@ -11,13 +11,17 @@ header {
 
 @media print {
   header {
-    grid-column: 2;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-column: 2;
+    padding: 0;
   }
 }
 
@@ -27,7 +31,9 @@ header {
 
 @media print {
   .title-headline {
+    display: block;
     font-size: 2rem;
+    margin: auto;
   }
 }
 
@@ -42,8 +48,9 @@ header {
 
 @media print {
   .me {
-    height: 100px;
+    height: 70px;
     width: auto;
+    margin: initial;
   }
 }
 
