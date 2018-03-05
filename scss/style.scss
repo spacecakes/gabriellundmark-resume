@@ -39,6 +39,9 @@ a:active {
 .wrapper > section {
   max-width: 1200px;
   grid-column: 2;
+  @include breakpoint(print) {
+    margin: 50px;
+  }
 }
 
 // Headlines

@@ -7,22 +7,44 @@ body {
 
 header {
   grid-column: 1/-1;
-  font-size: 2em;
 }
 
 @media print {
   header {
     grid-column: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.title-headline {
+  font-size: 5rem;
+}
+
+@media print {
+  .title-headline {
+    font-size: 2rem;
   }
 }
 
 .me {
   display: block;
   border-radius: 50%;
-  width: 200px;
   height: 200px;
+  width: auto;
   margin: auto;
   padding: 50px;
+}
+
+@media print {
+  .me {
+    height: 100px;
+    width: auto;
+  }
 }
 
 .profile p:last-of-type {
@@ -180,6 +202,12 @@ a:active {
 .wrapper > section {
   max-width: 1200px;
   grid-column: 2;
+}
+
+@media print {
+  .wrapper > section {
+    margin: 50px;
+  }
 }
 
 .headline,

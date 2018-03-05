@@ -1,16 +1,27 @@
 header {
   grid-column: 1/-1;
-  font-size: 2em;
   @include breakpoint(print) {
     grid-column: 2;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.title-headline {
+  font-size: 5rem;
+  @include breakpoint(print) {
+    font-size: 2rem;
   }
 }
 
 .me {
   display: block;
   border-radius: 50%;
-  width: 200px;
   height: 200px;
+  width: auto;
   margin: auto;
   padding: 50px;
+  @include breakpoint(print) {
+    height: 100px;
+    width: auto;
+  }
 }
