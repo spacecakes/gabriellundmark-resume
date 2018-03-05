@@ -1,0 +1,45 @@
+// General sidebar
+.sidebar {
+  padding: 1em;
+  align-self: center;
+  background-color: $sidebar-bg-color;
+  border-radius: 5px;
+}
+.sidebar li,
+.sidebar h4 {
+  font-size: 0.7em;
+  font-family: $sidebar-font;
+}
+.sidebar ul {
+  list-style: circle;
+  padding: 0 1em 0 1em;
+}
+
+// Contact information
+.sidebar.contact {
+  grid-column: 3;
+  grid-row-start: 2;
+  border-left: 2px solid $highlight-color;
+}
+.sidebar.contact ul {
+  list-style: none;
+  padding: 0;
+}
+.social {
+  width: 35px;
+  display: inline-block;
+}
+
+// Relevant skills
+.sidebar.skills {
+  align-self: center;
+  grid-column: 1;
+  grid-row: 5 / span 5;
+  border-right: 2px solid $highlight-color;
+}
+
+// Irrelevant skills
+.sidebar.other-skills {
+  align-self: center;
+  border-left: 2px solid $highlight-color;
+}

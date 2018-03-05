@@ -1,0 +1,78 @@
+@import "reset";
+@import "variables";
+@import "profile";
+@import "experience";
+@import "sidebars";
+// @import "footer";
+
+p,
+li {
+  font-family: $main-font;
+  line-height: 2;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: underline wavy $highlight-color;
+  color: inherit;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px 50px;
+  grid-template-columns: 230px 1fr 230px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 100px auto 200px auto;
+  padding-top: 100px;
+  font-size: 1.3em;
+}
+
+.wrapper > section {
+  max-width: 1200px;
+  grid-column: 2;
+}
+
+// Headlines
+.headline,
+.title-headline,
+blockquote {
+  font-family: $main-font;
+  font-weight: 300;
+  text-align: center;
+}
+
+.title-headline,
+blockquote {
+  grid-column: 1 /-1;
+}
+
+.title-headline {
+  font-size: 4em;
+}
+
+h2.headline {
+  font-size: 2em;
+}
+blockquote {
+  font-style: italic;
+  font-size: 4em;
+  color: $highlight-color;
+}
+
+// Images
+figure {
+  grid-column: 1 /-1;
+}
+figure > img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+figcaption {
+  font-size: 0.6em;
+  font-family: $sidebar-font;
+  color: $second-font-color;
+}

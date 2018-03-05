@@ -1,0 +1,23 @@
+.experience {
+  text-align: center;
+}
+.experience p {
+  margin: 0;
+}
+.title {
+  margin-top: 1.5em;
+}
+
+// Company logos (not used)
+.logo {
+  float: right;
+  height: 30px;
+  display: none;
+}
+
+.company {
+}
+.date {
+  font-size: 0.7em;
+  color: $second-font-color;
+}

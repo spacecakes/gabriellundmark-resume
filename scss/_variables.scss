@@ -1,0 +1,9 @@
+// Colors
+$main-font-color: rgb(63, 63, 63);
+$second-font-color: lighten($main-font-color, $amount: 30);
+$sidebar-bg-color: rgba(0, 0, 0, 0.03);
+$highlight-color: rgb(118, 180, 200);
+
+// Fonts
+$sidebar-font: "Nunito", sans-serif;
+$main-font: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
