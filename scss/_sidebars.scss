@@ -6,11 +6,15 @@
   @include breakpoint(print) {
     display: none;
   }
+  @include breakpoint(tablet) {
+    border: 2px solid $highlight-color;
+  }
 }
 .sidebar h4 {
   font-size: 1em;
   font-family: $sidebar-font;
   margin: 0.5em;
+  text-align: center;
 }
 
 .list-items {
@@ -20,7 +24,6 @@
 }
 
 .list-item {
-  border: 2px solid blue;
   font-family: $sidebar-font;
   padding: 0.5em;
   flex-basis: 100%;
@@ -39,7 +42,6 @@
   border-left: 2px solid $highlight-color;
   align-self: center;
   @include breakpoint(tablet) {
-    border: 2px solid $highlight-color;
     grid-column: 1 / -1;
     grid-row: 3;
     margin: 2em;
@@ -73,7 +75,6 @@
   grid-row: 5 / span 5;
   border-right: 2px solid $highlight-color;
   @include breakpoint(tablet) {
-    border: 2px solid $highlight-color;
     grid-row: 8;
     grid-column: 1 / span 2;
     margin-left: 2em;
@@ -91,7 +92,6 @@
   border-left: 2px solid $highlight-color;
   @include breakpoint(tablet) {
     grid-row: 8;
-    border: 2px solid $highlight-color;
     grid-column: span 2 / -1;
     margin-right: 2em;
   }

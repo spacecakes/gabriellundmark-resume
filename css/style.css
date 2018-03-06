@@ -63,10 +63,17 @@ header {
   }
 }
 
+@media (max-width: 1024px) {
+  .sidebar {
+    border: 2px solid #76b4c8;
+  }
+}
+
 .sidebar h4 {
   font-size: 1em;
   font-family: "Nunito", sans-serif;
   margin: 0.5em;
+  text-align: center;
 }
 
 .list-items {
@@ -79,7 +86,6 @@ header {
 }
 
 .list-item {
-  border: 2px solid blue;
   font-family: "Nunito", sans-serif;
   padding: 0.5em;
   -ms-flex-preferred-size: 100%;
@@ -112,7 +118,6 @@ header {
 
 @media (max-width: 1024px) {
   .sidebar.contact {
-    border: 2px solid #76b4c8;
     grid-column: 1 / -1;
     grid-row: 3;
     margin: 2em;
@@ -159,7 +164,6 @@ header {
 
 @media (max-width: 1024px) {
   .sidebar.relevant-skills {
-    border: 2px solid #76b4c8;
     grid-row: 8;
     grid-column: 1 / span 2;
     margin-left: 2em;
@@ -183,7 +187,6 @@ header {
 @media (max-width: 1024px) {
   .sidebar.other-skills {
     grid-row: 8;
-    border: 2px solid #76b4c8;
     grid-column: span 2 / -1;
     margin-right: 2em;
   }
