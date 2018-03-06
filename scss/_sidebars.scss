@@ -6,6 +6,9 @@
   @include breakpoint(print) {
     display: none;
   }
+  @include breakpoint(tablet) {
+    margin: 2em;
+  }
 }
 .sidebar li,
 .sidebar h4 {
@@ -23,6 +26,10 @@
   grid-row-start: 2;
   border-left: 2px solid $highlight-color;
   align-self: center;
+  @include breakpoint(tablet) {
+    border: 2px solid $highlight-color;
+    grid-column: 1 / -1;
+  }
 }
 .sidebar.contact ul {
   list-style: none;
@@ -41,10 +48,18 @@
   grid-column: 1;
   grid-row: 5 / span 5;
   border-right: 2px solid $highlight-color;
+  @include breakpoint(tablet) {
+    border: 2px solid $highlight-color;
+    grid-column: 1 / -1;
+  }
 }
 
 // Irrelevant skills
 .sidebar.other-skills {
   align-self: center;
   border-left: 2px solid $highlight-color;
+  @include breakpoint(tablet) {
+    border: 2px solid $highlight-color;
+    grid-column: 1 / -1;
+  }
 }

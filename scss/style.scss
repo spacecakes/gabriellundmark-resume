@@ -3,7 +3,6 @@
 @import "variables";
 @import "header";
 @import "profile";
-@import "experience";
 @import "sidebars";
 @import "footer";
 
@@ -35,6 +34,7 @@ a:active {
   color: inherit;
 }
 
+// General layout
 .wrapper {
   display: grid;
   grid-gap: 10px 50px;
@@ -44,7 +44,6 @@ a:active {
   margin: 100px auto 200px auto;
   padding-top: 100px;
   @include breakpoint(print) {
-    grid-template-columns: 1fr;
     margin: auto;
   }
 }
@@ -54,11 +53,69 @@ a:active {
   grid-column: 2;
   @include breakpoint(print) {
     margin: 50px;
+    grid-column: 1 / -1;
+  }
+  @include breakpoint(tablet) {
+    grid-column: 1 / -1;
+    padding: 2em;
   }
 }
 
-// Headlines
+.experience {
+  text-align: center;
+}
+.experience p {
+  margin: 0;
+}
+.title {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
 
+// Company logos (not used)
+.logo {
+  height: 30px;
+  display: none;
+}
+// .work > .company {
+//   display: none;
+// }
+// .education > .logo {
+//   display: none;
+// }
+.date {
+  font-size: 1em;
+  color: $second-font-color;
+}
+
+.experience {
+  text-align: center;
+}
+.experience p {
+  margin: 0;
+}
+.title {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+// Company logos (not used)
+.logo {
+  height: 30px;
+  display: none;
+}
+// .work > .company {
+//   display: none;
+// }
+// .education > .logo {
+//   display: none;
+// }
+.date {
+  font-size: 1em;
+  color: $second-font-color;
+}
+
+// Headlines
 blockquote {
   font-weight: 300;
   text-align: center;
