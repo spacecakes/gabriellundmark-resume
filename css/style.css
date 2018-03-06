@@ -187,6 +187,14 @@ li {
   font-size: 1.4em;
 }
 
+@media print {
+  p,
+  li {
+    line-height: 1.2;
+    font-size: 1em;
+  }
+}
+
 .headline {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
@@ -301,26 +309,11 @@ a:active {
   margin: 0;
 }
 
-.title {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-.logo {
-  height: 30px;
-  display: none;
-}
-
-.date {
-  font-size: 1em;
-  color: #8c8c8c;
-}
-
 blockquote {
   font-weight: 300;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
-  grid-column: 1 /-1;
+  grid-column: 1 / -1;
   font-style: italic;
   font-size: 4em;
   color: #76b4c8;
@@ -353,5 +346,12 @@ figure > img {
 figcaption {
   font-size: 0.6em;
   font-family: "Nunito", sans-serif;
+  margin-left: 1em;
   color: #8c8c8c;
+}
+
+@media (min-width: 1025px) {
+  figcaption {
+    margin-left: 0;
+  }
 }

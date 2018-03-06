@@ -11,6 +11,10 @@ li {
   font-family: $main-font;
   line-height: 2;
   font-size: 1.4em;
+  @include breakpoint(print) {
+    line-height: 1.2;
+    font-size: 1em;
+  }
 }
 
 .headline {
@@ -93,12 +97,7 @@ a:active {
   height: 30px;
   display: none;
 }
-// .work > .company {
-//   display: none;
-// }
-// .education > .logo {
-//   display: none;
-// }
+
 .date {
   font-size: 1em;
   color: $second-font-color;
@@ -110,33 +109,13 @@ a:active {
 .experience p {
   margin: 0;
 }
-.title {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-// Company logos (not used)
-.logo {
-  height: 30px;
-  display: none;
-}
-// .work > .company {
-//   display: none;
-// }
-// .education > .logo {
-//   display: none;
-// }
-.date {
-  font-size: 1em;
-  color: $second-font-color;
-}
 
 // Headlines
 blockquote {
   font-weight: 300;
   text-align: center;
   font-family: $main-font;
-  grid-column: 1 /-1;
+  grid-column: 1 / -1;
   font-style: italic;
   font-size: 4em;
   color: $highlight-color;
@@ -162,5 +141,9 @@ figure > img {
 figcaption {
   font-size: 0.6em;
   font-family: $sidebar-font;
+  margin-left: 1em;
   color: $second-font-color;
+  @include breakpoint(desktop) {
+    margin-left: 0;
+  }
 }
