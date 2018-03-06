@@ -63,12 +63,6 @@ header {
   }
 }
 
-@media (max-width: 1024px) {
-  .sidebar {
-    margin: 2em;
-  }
-}
-
 .sidebar li,
 .sidebar h4 {
   font-size: 1em;
@@ -92,6 +86,9 @@ header {
   .sidebar.contact {
     border: 2px solid #76b4c8;
     grid-column: 1 / -1;
+    grid-row: 3;
+    margin: 2em;
+    text-align: center;
   }
 }
 
@@ -123,12 +120,14 @@ header {
     border: 2px solid #76b4c8;
     grid-row: 8;
     grid-column: 1 / span 2;
+    margin-left: 2em;
   }
 }
 
 @media (max-width: 640px) {
   .sidebar.relevant-skills {
     grid-column: 1 / -1;
+    margin: 2em;
   }
 }
 
@@ -144,6 +143,7 @@ header {
     grid-row: 8;
     border: 2px solid #76b4c8;
     grid-column: span 2 / -1;
+    margin-right: 2em;
   }
 }
 
@@ -151,6 +151,7 @@ header {
   .sidebar.other-skills {
     grid-row: 9;
     grid-column: 1 / -1;
+    margin: 2em;
   }
 }
 
