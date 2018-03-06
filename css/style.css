@@ -77,8 +77,7 @@ header {
 }
 
 .list-items {
-  border: 2px solid blue;
-  font-size: 1em;
+  font-size: 0.9em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,13 +125,6 @@ header {
   }
 }
 
-.social-icons {
-  max-height: 30px;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
 @media (max-width: 1024px) {
   .list-item.contact {
     -webkit-box-flex: 1;
@@ -150,10 +142,20 @@ header {
 }
 
 .list-item.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  min-width: 30px;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.social-icons {
+  height: 30px;
+  width: 100%;
+  display: block;
 }
 
 .sidebar.relevant-skills {

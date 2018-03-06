@@ -18,8 +18,7 @@
 }
 
 .list-items {
-  border: 2px solid blue;
-  font-size: 1em;
+  font-size: 0.9em;
   display: flex;
   flex-wrap: wrap;
 }
@@ -27,6 +26,7 @@
 .list-item {
   font-family: $sidebar-font;
   padding: 0.5em;
+
   flex-basis: 100%;
   @include breakpoint(tablet) {
     flex: 1 1 40%;
@@ -49,12 +49,6 @@
     text-align: center;
   }
 }
-.social-icons {
-  max-height: 30px;
-  display: block;
-  height: 100%;
-  width: 100%;
-}
 
 .list-item.contact {
   @include breakpoint(tablet) {
@@ -66,8 +60,15 @@
 }
 
 .list-item.social {
-  flex: 1;
-  min-width: 30px;
+  // padding: 0;
+  display: flex;
+  flex: 1 1 100%;
+  justify-content: space-around;
+}
+.social-icons {
+  height: 30px;
+  width: 100%;
+  display: block;
 }
 
 // Relevant skills
