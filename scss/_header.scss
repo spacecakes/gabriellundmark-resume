@@ -9,14 +9,6 @@ header {
     padding: 0;
   }
 }
-h1.headline {
-  font-size: 5rem;
-  @include breakpoint(print) {
-    display: block;
-    font-size: 2rem;
-    margin: auto;
-  }
-}
 
 .me {
   display: block;

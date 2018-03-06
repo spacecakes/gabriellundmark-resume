@@ -25,18 +25,6 @@ header {
   }
 }
 
-h1.headline {
-  font-size: 5rem;
-}
-
-@media print {
-  h1.headline {
-    display: block;
-    font-size: 2rem;
-    margin: auto;
-  }
-}
-
 .me {
   display: block;
   border-radius: 50%;
@@ -188,13 +176,30 @@ li {
   text-align: center;
 }
 
-h1,
-h3 {
-  font-size: 2em;
+h1 {
+  font-size: 5rem;
+}
+
+@media print {
+  h1 {
+    display: block;
+    font-size: 2rem;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 
 h2 {
   font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
 }
 
 a,
@@ -221,6 +226,13 @@ a:active {
 @media print {
   .wrapper {
     margin: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    margin: auto;
+    padding-top: 40px;
   }
 }
 

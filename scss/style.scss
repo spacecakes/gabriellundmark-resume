@@ -18,12 +18,24 @@ li {
   font-weight: 300;
   text-align: center;
 }
-h1,
-h3 {
-  font-size: 2em;
+
+h1 {
+  font-size: 5rem;
+  @include breakpoint(print) {
+    display: block;
+    font-size: 2rem;
+    margin: auto;
+  }
+  @include breakpoint(tablet) {
+    font-size: 3rem;
+  }
 }
+
 h2 {
   font-size: 3em;
+}
+h3 {
+  font-size: 2em;
 }
 
 a,
@@ -45,6 +57,10 @@ a:active {
   padding-top: 100px;
   @include breakpoint(print) {
     margin: auto;
+  }
+  @include breakpoint(tablet) {
+    margin: auto;
+    padding-top: 40px;
   }
 }
 
