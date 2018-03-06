@@ -22,7 +22,7 @@
 
 // Contact information
 .sidebar.contact {
-  grid-column: 3;
+  grid-column: span 1 / -1;
   grid-row-start: 2;
   border-left: 2px solid $highlight-color;
   align-self: center;
@@ -45,11 +45,15 @@
 // Relevant skills
 .sidebar.relevant-skills {
   align-self: center;
-  grid-column: 1;
+  grid-column: 1 / span 1;
   grid-row: 5 / span 5;
   border-right: 2px solid $highlight-color;
   @include breakpoint(tablet) {
     border: 2px solid $highlight-color;
+    grid-row: 8;
+    grid-column: 1 / span 2;
+  }
+  @include breakpoint(smartphone-big) {
     grid-column: 1 / -1;
   }
 }
@@ -57,9 +61,15 @@
 // Irrelevant skills
 .sidebar.other-skills {
   align-self: center;
+  grid-column: span 1 / -1;
   border-left: 2px solid $highlight-color;
   @include breakpoint(tablet) {
+    grid-row: 8;
     border: 2px solid $highlight-color;
+    grid-column: span 2 / -1;
+  }
+  @include breakpoint(smartphone-big) {
+    grid-row: 9;
     grid-column: 1 / -1;
   }
 }
