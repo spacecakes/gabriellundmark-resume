@@ -159,26 +159,22 @@ footer {
   border-top: 2px solid #76b4c8;
   grid-column: 1/-1;
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 3em 10vw;
-  margin-top: 100px;
+  padding: 3em 0;
 }
 
 @media print {
   footer {
     border: none;
-    grid-column: 2;
   }
 }
 
-footer ul {
+footer p {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.7em;
+  max-width: 500px;
+  margin: auto;
   list-style: none;
   text-align: center;
-}
-
-footer li {
-  font-family: "Nunito", sans-serif;
-  font-size: 12px;
-  padding: 4px;
 }
 
 p,
@@ -191,7 +187,7 @@ li {
 @media print {
   p,
   li {
-    line-height: 1.2;
+    line-height: 1.4;
     font-size: 1em;
   }
 }

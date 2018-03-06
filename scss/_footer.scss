@@ -3,19 +3,16 @@ footer {
   border-top: 2px solid $highlight-color;
   grid-column: 1/-1;
   background-color: $sidebar-bg-color;
-  padding: 3em 10vw;
-  margin-top: 100px;
+  padding: 3em 0;
   @include breakpoint(print) {
     border: none;
-    grid-column: 2;
   }
 }
-footer ul {
+footer p {
+  font-family: $sidebar-font;
+  font-size: 0.7em;
+  max-width: 500px;
+  margin: auto;
   list-style: none;
   text-align: center;
-}
-footer li {
-  font-family: $sidebar-font;
-  font-size: 12px;
-  padding: 4px;
 }
