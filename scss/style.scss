@@ -50,7 +50,8 @@ a:active {
 .wrapper {
   display: grid;
   grid-gap: 10px 50px;
-  grid-template-columns: 230px 1fr 230px;
+  grid-template-columns: minmax(auto, 230px) 1fr minmax(auto, 230px);
+  // grid-template-columns: 230px 1fr 230px;
   justify-content: center;
   max-width: 1200px;
   margin: 100px auto 200px auto;

@@ -1,8 +1,9 @@
-body {
+:root {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-width: 320px;
 }
 
 header {
@@ -141,7 +142,7 @@ footer {
   border-top: 2px solid #76b4c8;
   grid-column: 1/-1;
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 100px;
+  padding: 3em 10vw;
   margin-top: 100px;
 }
 
@@ -214,7 +215,7 @@ a:active {
 .wrapper {
   display: grid;
   grid-gap: 10px 50px;
-  grid-template-columns: 230px 1fr 230px;
+  grid-template-columns: minmax(auto, 230px) 1fr minmax(auto, 230px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

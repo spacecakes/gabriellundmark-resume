@@ -3,7 +3,7 @@ footer {
   border-top: 2px solid $highlight-color;
   grid-column: 1/-1;
   background-color: $sidebar-bg-color;
-  padding: 100px;
+  padding: 3em 10vw;
   margin-top: 100px;
   @include breakpoint(print) {
     border: none;
