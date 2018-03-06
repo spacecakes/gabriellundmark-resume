@@ -77,6 +77,7 @@ header {
 }
 
 .list-items {
+  border: 2px solid blue;
   font-size: 1em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -152,6 +153,7 @@ header {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  min-width: 30px;
 }
 
 .sidebar.relevant-skills {

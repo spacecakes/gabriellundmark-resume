@@ -18,6 +18,7 @@
 }
 
 .list-items {
+  border: 2px solid blue;
   font-size: 1em;
   display: flex;
   flex-wrap: wrap;
@@ -66,6 +67,7 @@
 
 .list-item.social {
   flex: 1;
+  min-width: 30px;
 }
 
 // Relevant skills
