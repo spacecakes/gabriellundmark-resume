@@ -17,6 +17,15 @@ li {
   }
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: underline wavy $highlight-color;
+  color: inherit;
+}
+
+// Headlines
 .headline {
   font-family: $main-font;
   font-weight: 300;
@@ -46,12 +55,24 @@ h3 {
   font-size: 2em;
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
-  text-decoration: underline wavy $highlight-color;
-  color: inherit;
+blockquote {
+  font-weight: 300;
+  text-align: center;
+  font-family: $main-font;
+  grid-column: 1 / -1;
+  font-style: italic;
+  font-size: 5em;
+  color: $highlight-color;
+
+  @include breakpoint(print) {
+    display: none;
+  }
+  @include breakpoint(tablet) {
+    font-size: 4rem;
+  }
+  @include breakpoint(smartphone-small) {
+    font-size: 3rem;
+  }
 }
 
 // General layout
@@ -107,21 +128,6 @@ a:active {
 }
 .experience p {
   margin: 0;
-}
-
-// Headlines
-blockquote {
-  font-weight: 300;
-  text-align: center;
-  font-family: $main-font;
-  grid-column: 1 / -1;
-  font-style: italic;
-  font-size: 4em;
-  color: $highlight-color;
-
-  @include breakpoint(print) {
-    display: none;
-  }
 }
 
 // Images

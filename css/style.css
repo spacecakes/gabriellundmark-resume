@@ -192,6 +192,15 @@ li {
   }
 }
 
+a,
+a:visited,
+a:hover,
+a:active {
+  -webkit-text-decoration: underline wavy #76b4c8;
+          text-decoration: underline wavy #76b4c8;
+  color: inherit;
+}
+
 .headline {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
@@ -229,13 +238,32 @@ h3 {
   font-size: 2em;
 }
 
-a,
-a:visited,
-a:hover,
-a:active {
-  -webkit-text-decoration: underline wavy #76b4c8;
-          text-decoration: underline wavy #76b4c8;
-  color: inherit;
+blockquote {
+  font-weight: 300;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  grid-column: 1 / -1;
+  font-style: italic;
+  font-size: 5em;
+  color: #76b4c8;
+}
+
+@media print {
+  blockquote {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  blockquote {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  blockquote {
+    font-size: 3rem;
+  }
 }
 
 .wrapper {
@@ -304,22 +332,6 @@ a:active {
 
 .experience p {
   margin: 0;
-}
-
-blockquote {
-  font-weight: 300;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
-  grid-column: 1 / -1;
-  font-style: italic;
-  font-size: 4em;
-  color: #76b4c8;
-}
-
-@media print {
-  blockquote {
-    display: none;
-  }
 }
 
 figure {
