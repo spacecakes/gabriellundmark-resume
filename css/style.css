@@ -73,8 +73,6 @@ header {
   padding: 0.5em;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
-  -webkit-clip-path: polygon(20%, 20%, 20%, 20%);
-          clip-path: polygon(20%, 20%, 20%, 20%);
 }
 
 @media print {
