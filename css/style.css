@@ -222,7 +222,7 @@ img.list-item {
 
 @media (max-width: 1024px) {
   .sidebar.creations {
-    grid-row: 13;
+    grid-row: 14;
     grid-column: 1 / -1;
     max-width: 400px;
     margin: auto;
