@@ -3,7 +3,7 @@ footer {
   border-top: 2px solid $highlight-color;
   grid-column: 1/-1;
   background-color: $sidebar-bg-color;
-  padding: 3em 0;
+  padding: 8em 0;
   @include breakpoint(print) {
     border: none;
   }
@@ -15,4 +15,17 @@ footer p {
   margin: auto;
   list-style: none;
   text-align: center;
+}
+
+.web-footer {
+  @include breakpoint(print) {
+    display: none;
+  }
+}
+
+.print-footer {
+  display: none;
+  @include breakpoint(print) {
+    display: block;
+  }
 }

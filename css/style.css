@@ -254,7 +254,7 @@ footer {
   border-top: 2px solid #76b4c8;
   grid-column: 1/-1;
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 3em 0;
+  padding: 8em 0;
 }
 
 @media print {
@@ -270,6 +270,22 @@ footer p {
   margin: auto;
   list-style: none;
   text-align: center;
+}
+
+@media print {
+  .web-footer {
+    display: none;
+  }
+}
+
+.print-footer {
+  display: none;
+}
+
+@media print {
+  .print-footer {
+    display: block;
+  }
 }
 
 p {
@@ -405,6 +421,7 @@ blockquote {
   .wrapper > section {
     margin: 50px;
     grid-column: 1 / -1;
+    page-break-after: always;
   }
 }
 

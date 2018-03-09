@@ -82,6 +82,13 @@ blockquote {
   }
 }
 
+// blockquote::before {
+//   content: "“";
+// }
+// blockquote:after {
+//   content: "”";
+// }
+
 // General layout
 .wrapper {
   display: grid;
@@ -105,6 +112,7 @@ blockquote {
   @include breakpoint(print) {
     margin: 50px;
     grid-column: 1 / -1;
+    page-break-after: always;
   }
   @include breakpoint(tablet) {
     grid-column: 1 / -1;
