@@ -65,6 +65,7 @@ h3 {
 }
 
 blockquote {
+  margin: 0;
   font-weight: 300;
   text-align: center;
   font-family: $main-font;
@@ -100,6 +101,7 @@ blockquote {
 .wrapper > section {
   max-width: 1200px;
   grid-column: 2/-2;
+  margin: 32px 0;
   @include breakpoint(print) {
     margin: 50px;
     grid-column: 1 / -1;

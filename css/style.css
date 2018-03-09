@@ -70,9 +70,10 @@ header {
 }
 
 .sidebar {
-  padding: 0.5em;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 @media print {
@@ -90,7 +91,8 @@ header {
 .sidebar h4 {
   font-size: 1em;
   font-family: "Nunito", sans-serif;
-  margin: 0.5em;
+  margin: 0;
+  padding: 0.7em 1em;
   text-align: center;
 }
 
@@ -105,7 +107,7 @@ header {
 
 .list-item {
   font-family: "Nunito", sans-serif;
-  padding: 0.5em;
+  padding: 0.7em 1em;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
 }
@@ -123,6 +125,21 @@ header {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
+  }
+}
+
+img.list-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin-top: 0.7em;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (max-width: 1024px) {
+  img.list-item {
+    display: none;
   }
 }
 
@@ -177,10 +194,8 @@ header {
 }
 
 .sidebar.relevant-skills {
-  -ms-flex-item-align: center;
-      align-self: center;
   grid-column: 1 / span 1;
-  grid-row: 5 / span 5;
+  grid-row: 5;
   border-right: 2px solid #76b4c8;
 }
 
@@ -199,9 +214,22 @@ header {
   }
 }
 
+.sidebar.creations {
+  grid-column: 1 / span 1;
+  grid-row: 8;
+  border-right: 2px solid #76b4c8;
+}
+
+@media (max-width: 1024px) {
+  .sidebar.creations {
+    grid-row: 13;
+    grid-column: 1 / -1;
+    max-width: 400px;
+    margin: auto;
+  }
+}
+
 .sidebar.other-skills {
-  -ms-flex-item-align: center;
-      align-self: center;
   grid-column: span 1 / -1;
   border-left: 2px solid #76b4c8;
 }
@@ -323,6 +351,7 @@ h3 {
 }
 
 blockquote {
+  margin: 0;
   font-weight: 300;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
@@ -370,6 +399,7 @@ blockquote {
 .wrapper > section {
   max-width: 1200px;
   grid-column: 2/-2;
+  margin: 32px 0;
 }
 
 @media print {
