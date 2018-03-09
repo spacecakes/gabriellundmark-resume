@@ -26,6 +26,24 @@ header {
   }
 }
 
+.browser-warning {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: white;
+  background: #000;
+  text-align: center;
+  font-size: 10px;
+}
+
+@supports ((display: -webkit-box) or (display: flex)) {
+  .browser-warning {
+    display: none;
+  }
+}
+
 .me {
   display: block;
   border-radius: 50%;
@@ -55,6 +73,8 @@ header {
   padding: 0.5em;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 5px;
+  -webkit-clip-path: polygon(20%, 20%, 20%, 20%);
+          clip-path: polygon(20%, 20%, 20%, 20%);
 }
 
 @media print {
@@ -226,16 +246,21 @@ footer p {
   text-align: center;
 }
 
-p,
-li {
+p {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   line-height: 2;
   font-size: 1.4em;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.2em;
+  }
 }
 
 @media print {
-  p,
-  li {
+  p {
     line-height: 1.4;
     font-size: 1em;
   }
@@ -270,7 +295,7 @@ h1 {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 3rem;
+    font-size: 10vw;
   }
 }
 
@@ -283,8 +308,20 @@ h2 {
   font-size: 3em;
 }
 
+@media (max-width: 640px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
 h3 {
   font-size: 2em;
+}
+
+@media (max-width: 640px) {
+  h3 {
+    font-size: 1.5em;
+  }
 }
 
 blockquote {
@@ -305,13 +342,7 @@ blockquote {
 
 @media (max-width: 1024px) {
   blockquote {
-    font-size: 4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  blockquote {
-    font-size: 3rem;
+    font-size: 10vw;
   }
 }
 
@@ -371,6 +402,12 @@ blockquote {
 .date {
   font-size: 1em;
   color: #8c8c8c;
+}
+
+@media (max-width: 640px) {
+  .date {
+    font-size: 0.8em;
+  }
 }
 
 .experience {

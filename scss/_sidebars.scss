@@ -9,6 +9,7 @@
   @include breakpoint(tablet) {
     border: 2px solid $highlight-color;
   }
+  clip-path: polygon(20%, 20%, 20%, 20%);
 }
 .sidebar h4 {
   font-size: 1em;
