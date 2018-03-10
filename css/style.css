@@ -315,7 +315,14 @@ h3 {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  h4 {
+    font-size: 1.2em;
+  }
 }
 
 blockquote {
@@ -432,7 +439,11 @@ figcaption {
   }
   p {
     line-height: 1.5;
-    font-size: 1em;
+    font-size: 1rem;
+  }
+  .date {
+    font-size: 0.6em;
+    color: lightgray;
   }
   h1 {
     font-size: 2rem;
@@ -442,7 +453,11 @@ figcaption {
     font-size: 2rem;
   }
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+  }
+  h4 {
+    margin-top: 0;
+    font-size: 1.2rem;
   }
   section.experience h2 {
     page-break-before: always;

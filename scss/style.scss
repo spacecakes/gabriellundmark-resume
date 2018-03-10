@@ -55,7 +55,11 @@ h3 {
   }
 }
 h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
+  margin-top: 0;
+  @include breakpoint(smartphone-big) {
+    font-size: 1.2em;
+  }
 }
 
 blockquote {
