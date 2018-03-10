@@ -4,9 +4,6 @@
   background-color: $sidebar-bg-color;
   border-radius: 5px;
   align-self: center;
-  @include breakpoint(print) {
-    display: none;
-  }
   @include breakpoint(tablet) {
     border: 2px solid $highlight-color;
   }
@@ -16,7 +13,10 @@
   font-family: $sidebar-font;
   margin: 0;
   padding: 0.7em 1em;
-  text-align: center;
+  text-align: initial;
+  @include breakpoint(tablet) {
+    text-align: center;
+  }
 }
 
 .list-items {

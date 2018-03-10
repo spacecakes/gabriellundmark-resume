@@ -17,15 +17,6 @@ footer p {
   text-align: center;
 }
 
-.web-footer {
-  @include breakpoint(print) {
-    display: none;
-  }
-}
-
 .print-footer {
   display: none;
-  @include breakpoint(print) {
-    display: block;
-  }
 }

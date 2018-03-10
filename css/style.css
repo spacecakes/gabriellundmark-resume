@@ -10,22 +10,6 @@ header {
   grid-column: 1/-1;
 }
 
-@media print {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    grid-column: 2;
-    padding: 0;
-  }
-}
-
 .browser-warning {
   position: relative;
   top: 0;
@@ -53,11 +37,9 @@ header {
   padding: 50px;
 }
 
-@media print {
+@media (max-width: 640px) {
   .me {
-    height: 70px;
-    width: auto;
-    margin: initial;
+    height: 100px;
   }
 }
 
@@ -76,12 +58,6 @@ header {
       align-self: center;
 }
 
-@media print {
-  .sidebar {
-    display: none;
-  }
-}
-
 @media (max-width: 1024px) {
   .sidebar {
     border: 2px solid #76b4c8;
@@ -93,7 +69,13 @@ header {
   font-family: "Nunito", sans-serif;
   margin: 0;
   padding: 0.7em 1em;
-  text-align: center;
+  text-align: initial;
+}
+
+@media (max-width: 1024px) {
+  .sidebar h4 {
+    text-align: center;
+  }
 }
 
 .list-items {
@@ -257,12 +239,6 @@ footer {
   padding: 8em 0;
 }
 
-@media print {
-  footer {
-    border: none;
-  }
-}
-
 footer p {
   font-family: "Nunito", sans-serif;
   font-size: 0.7em;
@@ -272,20 +248,8 @@ footer p {
   text-align: center;
 }
 
-@media print {
-  .web-footer {
-    display: none;
-  }
-}
-
 .print-footer {
   display: none;
-}
-
-@media print {
-  .print-footer {
-    display: block;
-  }
 }
 
 p {
@@ -301,13 +265,6 @@ p {
   }
 }
 
-@media print {
-  p {
-    line-height: 1.4;
-    font-size: 1em;
-  }
-}
-
 a,
 a:visited,
 a:hover,
@@ -317,33 +274,24 @@ a:active {
   color: inherit;
 }
 
-.headline {
+h1,
+h2,
+h3,
+h4 {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   text-align: center;
+  margin-bottom: 0;
 }
 
 h1 {
   font-size: 5rem;
 }
 
-@media print {
-  h1 {
-    display: block;
-    font-size: 2rem;
-    margin: auto;
-  }
-}
-
 @media (max-width: 1024px) {
   h1 {
     font-size: 10vw;
   }
-}
-
-h2,
-h3 {
-  margin-bottom: 0;
 }
 
 h2 {
@@ -372,14 +320,8 @@ blockquote {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   grid-column: 1 / -1;
   font-style: italic;
-  font-size: 5em;
   color: #76b4c8;
-}
-
-@media print {
-  blockquote {
-    display: none;
-  }
+  font-size: 5em;
 }
 
 @media (max-width: 1024px) {
@@ -399,12 +341,6 @@ blockquote {
   margin: 200px auto 100px auto;
 }
 
-@media print {
-  .wrapper {
-    margin: auto;
-  }
-}
-
 @media (max-width: 1024px) {
   .wrapper {
     margin-top: 50px;
@@ -415,14 +351,6 @@ blockquote {
   max-width: 1200px;
   grid-column: 2/-2;
   margin: 32px 0;
-}
-
-@media print {
-  .wrapper > section {
-    margin: 50px;
-    grid-column: 1 / -1;
-    page-break-after: always;
-  }
 }
 
 @media (max-width: 1024px) {
@@ -467,12 +395,6 @@ figure {
   margin: 2em 0 2em 0;
 }
 
-@media print {
-  figure {
-    display: none;
-  }
-}
-
 figure > img {
   width: 100%;
   max-height: 400px;
@@ -490,5 +412,48 @@ figcaption {
 @media (min-width: 1025px) {
   figcaption {
     margin-left: 0;
+  }
+}
+
+@media print {
+  .me {
+    height: 100px;
+    width: auto;
+  }
+  p {
+    font-size: 1em;
+  }
+  h1 {
+    display: block;
+    font-size: 2rem;
+  }
+  section.experience.work h2 {
+    page-break-before: always;
+  }
+  figure {
+    display: none;
+  }
+  blockquote {
+    display: none;
+  }
+  .wrapper {
+    margin: auto;
+  }
+  .wrapper > section {
+    margin: 50px;
+    grid-column: 1 / -1;
+  }
+  .sidebar {
+    display: none;
+  }
+  footer {
+    padding: 1em;
+    border: none;
+  }
+  .web-footer {
+    display: none;
+  }
+  .print-footer {
+    display: block;
   }
 }

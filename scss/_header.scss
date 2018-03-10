@@ -1,13 +1,5 @@
 header {
   grid-column: 1/-1;
-
-  @include breakpoint(print) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-column: 2;
-    padding: 0;
-  }
 }
 
 .browser-warning {
@@ -34,9 +26,7 @@ header {
   width: auto;
   margin: auto;
   padding: 50px;
-  @include breakpoint(print) {
-    height: 70px;
-    width: auto;
-    margin: initial;
+  @include breakpoint(smartphone-big) {
+    height: 100px;
   }
 }

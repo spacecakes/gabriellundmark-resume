@@ -1,0 +1,51 @@
+// Print tweaks
+@media print {
+  .me {
+    height: 100px;
+    width: auto;
+  }
+
+  p {
+    // line-height: 1.4;
+    font-size: 1em;
+  }
+
+  h1 {
+    display: block;
+    font-size: 2rem;
+  }
+
+  section.experience.work h2 {
+    page-break-before: always;
+  }
+
+  figure {
+    display: none;
+  }
+
+  blockquote {
+    display: none;
+  }
+  .wrapper {
+    margin: auto;
+  }
+  .wrapper > section {
+    margin: 50px;
+    grid-column: 1 / -1;
+  }
+  .sidebar {
+    display: none;
+  }
+
+  footer {
+    padding: 1em;
+    border: none;
+  }
+  .web-footer {
+    display: none;
+  }
+
+  .print-footer {
+    display: block;
+  }
+}
