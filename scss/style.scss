@@ -85,12 +85,15 @@ blockquote {
 
 // General layout
 .wrapper {
-  display: grid;
-  grid-gap: 10px 50px;
-  grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
-  justify-content: center;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 200px auto 100px auto;
+  @supports (display: grid) {
+    max-width: 1200px;
+    display: grid;
+    grid-gap: 10px 50px;
+    grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
+    justify-content: center;
+  }
   @include breakpoint(tablet) {
     margin-top: 50px;
   }
