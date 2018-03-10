@@ -281,7 +281,7 @@ h4 {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -312,6 +312,10 @@ h3 {
   h3 {
     font-size: 1.5em;
   }
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 blockquote {
