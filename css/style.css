@@ -418,7 +418,7 @@ figcaption {
   }
 }
 
-@media screen {
+@media print {
   .me {
     height: 100px;
     width: auto;
