@@ -207,7 +207,7 @@ img.list-item {
     grid-row: 14;
     grid-column: 1 / -1;
     max-width: 400px;
-    margin: auto;
+    margin: 50px auto;
   }
 }
 
@@ -236,7 +236,7 @@ footer {
   border-top: 2px solid #76b4c8;
   grid-column: 1/-1;
   background-color: rgba(0, 0, 0, 0.03);
-  padding: 8em 0;
+  padding: 4em 0;
 }
 
 footer p {
@@ -358,6 +358,12 @@ blockquote {
   }
 }
 
+@media (max-width: 640px) {
+  .wrapper {
+    margin-bottom: 0px;
+  }
+}
+
 .wrapper > section {
   max-width: 1200px;
   grid-column: 2/-2;
@@ -460,7 +466,8 @@ figcaption {
     font-size: 1.2rem;
   }
   section.experience h2 {
-    page-break-before: always;
+    -webkit-column-break-before: page;
+            break-before: page;
   }
   figure {
     display: none;

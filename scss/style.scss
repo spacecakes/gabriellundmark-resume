@@ -94,6 +94,9 @@ blockquote {
   @include breakpoint(tablet) {
     margin-top: 50px;
   }
+  @include breakpoint(smartphone-big) {
+    margin-bottom: 0px;
+  }
 }
 
 .wrapper > section {
