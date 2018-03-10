@@ -1,21 +1,28 @@
 // Print tweaks
-@media print {
+@media screen {
   .me {
     height: 100px;
     width: auto;
   }
 
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: inherit;
+  }
   p {
-    // line-height: 1.4;
+    line-height: 1.5;
     font-size: 1em;
   }
 
   h1 {
-    display: block;
     font-size: 2rem;
+    margin: 0;
   }
 
-  section.experience.work h2 {
+  section.experience h2 {
     page-break-before: always;
   }
 
@@ -38,8 +45,13 @@
   }
 
   footer {
+    margin-top: 280px;
     padding: 1em;
     border: none;
+  }
+  footer p {
+    font-size: 0.5em;
+    line-height: 1.8;
   }
   .web-footer {
     display: none;
