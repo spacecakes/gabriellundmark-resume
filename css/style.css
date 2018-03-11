@@ -379,7 +379,6 @@ blockquote {
 }
 
 .wrapper > section {
-  max-width: 1200px;
   grid-column: 2/-2;
 }
 
@@ -387,6 +386,12 @@ blockquote {
   .wrapper > section {
     grid-column: 1 / -1;
   }
+}
+
+.experience,
+.profile {
+  max-width: 640px;
+  margin: auto;
 }
 
 @media (max-width: 1024px) {

@@ -103,7 +103,7 @@ blockquote {
 }
 
 .wrapper > section {
-  max-width: 1200px;
+  // max-width: 1200px;
   grid-column: 2/-2;
   @include breakpoint(tablet) {
     grid-column: 1 / -1;
@@ -112,6 +112,8 @@ blockquote {
 
 .experience,
 .profile {
+  max-width: 640px;
+  margin: auto;
   @include breakpoint(tablet) {
     padding: 0 2em;
   }
