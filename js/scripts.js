@@ -6,7 +6,8 @@ function loadLetter() {
 
     xhr.onload = function () {
         if (this.status === 200) {
-            letter.innerHTML = this.responseText;
+            letter.innerHTML = '<p>' + this.responseText.replace(/(?:\r\n|\r|\n)/g, '</p><p>') + '</p>';
+
         }
     };
     xhr.send();
