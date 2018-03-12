@@ -43,12 +43,18 @@ header {
   }
 }
 
-.profile p:last-of-type {
-  font-size: 2em;
-  font-family: "League Script", cursive;
+.profile img:last-of-type {
   -webkit-transform: rotate(-4deg);
       -ms-transform: rotate(-4deg);
           transform: rotate(-4deg);
+  width: 200px;
+  padding: 50px 0;
+}
+
+@media (max-width: 640px) {
+  .profile img:last-of-type {
+    width: 150px;
+  }
 }
 
 .sidebar {
@@ -144,9 +150,16 @@ img.list-item {
 @media (max-width: 1024px) {
   .sidebar.contact {
     grid-column: 1 / -1;
+    max-width: 640px;
+    margin: auto;
     grid-row: 3;
-    margin: 2em;
     text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .sidebar.contact {
+    margin: 2em;
   }
 }
 
@@ -216,6 +229,12 @@ img.list-item {
     grid-column: 1 / -1;
     max-width: 400px;
     margin: 50px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar.creations {
+    margin: 2em;
   }
 }
 
