@@ -5,10 +5,10 @@ function loadLetter() {
     xhr.open('GET', 'letter.txt', true);
 
     xhr.onload = function () {
-        if (this.status === 200) {
+        if (this.status === 200)
             letter.innerHTML = '<p>' + this.responseText.replace(/(?:\r\n|\r|\n)/g, '</p><p>') + '</p>';
-
-        }
+        else
+            letter.innerHTML = '<p>(Ladda upp letter.txt för att generera personligt brev)</p>';
     };
     xhr.send();
 }
