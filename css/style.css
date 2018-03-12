@@ -33,8 +33,7 @@ header {
   border-radius: 50%;
   height: 150px;
   width: auto;
-  margin: auto;
-  padding: 50px;
+  margin: 50px auto;
 }
 
 @media (max-width: 640px) {
@@ -43,7 +42,8 @@ header {
   }
 }
 
-.profile img:last-of-type {
+.profile img:last-of-type,
+.letter img:last-of-type {
   -webkit-transform: rotate(-4deg);
       -ms-transform: rotate(-4deg);
           transform: rotate(-4deg);
@@ -52,7 +52,8 @@ header {
 }
 
 @media (max-width: 640px) {
-  .profile img:last-of-type {
+  .profile img:last-of-type,
+  .letter img:last-of-type {
     width: 150px;
   }
 }
@@ -478,6 +479,7 @@ figcaption {
   .me {
     height: 100px;
     width: auto;
+    margin-top: 0;
   }
   a,
   a:visited,
@@ -490,6 +492,9 @@ figcaption {
     line-height: 1.5;
     font-size: 1rem;
   }
+  .letter p {
+    font-size: 0.9rem;
+  }
   .date {
     font-size: 0.6em;
     color: lightgray;
@@ -499,37 +504,60 @@ figcaption {
     margin: 0;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   h3 {
     font-size: 1.5rem;
   }
   h4 {
-    margin-top: 0;
     font-size: 1.2rem;
   }
   section.experience h2 {
     -webkit-column-break-before: page;
             break-before: page;
   }
-  figure {
-    display: none;
-  }
-  blockquote {
+  figure,
+  blockquote,
+  .sidebar {
     display: none;
   }
   .wrapper {
     margin: auto;
   }
+  .profile,
+  .letter {
+    width: 500px;
+  }
   .wrapper > section {
-    margin: 50px;
+    margin: 0 auto;
     grid-column: 1 / -1;
   }
-  .sidebar {
+  .sidebar.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-row: 1;
+    grid-column: 1/-1;
+    border: 0;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  .sidebar.contact h4 {
+    display: none;
+  }
+  .list-item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .list-item.social {
     display: none;
   }
   footer {
-    margin-top: 280px;
+    background-color: white;
     padding: 1em;
     border: none;
   }
