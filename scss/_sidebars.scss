@@ -63,6 +63,7 @@ img.list-item {
     grid-column: 1 / -1;
     max-width: 640px;
     margin: auto;
+    margin-top: 50px;
     grid-row: 3;
     text-align: center;
   }
@@ -100,6 +101,7 @@ img.list-item {
     grid-row: 8;
     grid-column: 1 / span 2;
     margin-left: 2em;
+    margin-top: 2em;
   }
   @include breakpoint(smartphone-big) {
     grid-column: 1 / -1;
@@ -116,7 +118,7 @@ img.list-item {
     grid-row: 14;
     grid-column: 1 / -1;
     max-width: 400px;
-    margin: 50px auto;
+    margin: 2em auto;
   }
   @include breakpoint(smartphone-small) {
     margin: 2em;
@@ -131,6 +133,7 @@ img.list-item {
     grid-row: 8;
     grid-column: span 2 / -1;
     margin-right: 2em;
+    margin-top: 2em;
   }
   @include breakpoint(smartphone-big) {
     grid-row: 9;

@@ -1,7 +1,7 @@
 .profile img:last-of-type {
   transform: rotate(-4deg);
   width: 200px;
-  padding: 50px 0;
+  margin-top: 50px;
   @include breakpoint(smartphone-big) {
     width: 150px;
   }
