@@ -1,0 +1,20 @@
+// Hero images
+figure {
+  grid-column: 1 /-1;
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+}
+figcaption {
+  font-size: 0.6em;
+  font-family: $sidebar-font;
+  margin-left: 1em;
+  color: $second-font-color;
+  @include breakpoint(desktop) {
+    margin-left: 0;
+  }
+}

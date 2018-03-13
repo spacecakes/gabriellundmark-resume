@@ -3,7 +3,6 @@
   .me {
     height: 100px;
     width: auto;
-    margin-top: 0;
   }
 
   a,
@@ -52,25 +51,28 @@
   }
   .wrapper {
     margin: auto;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+      "contact"
+      "header"
+      "profile"
+      "work"
+      "edu"
+      "vol";
   }
   .profile,
-  .letter {
+  .letter,
+  .experience {
     width: 500px;
-  }
-  .wrapper > section {
-    margin: 0 auto;
-    grid-column: 1 / -1;
   }
 
   .sidebar.contact {
+    grid-area: contact;
     font-size: 0.2rem;
     display: flex;
     justify-content: center;
-    grid-row: 1;
-    grid-column: 1/-1;
     border: 0;
-    margin: auto;
-    margin-bottom: 50px;
   }
   .sidebar.contact h4 {
     display: none;
@@ -92,7 +94,6 @@
     text-align: center;
   }
   footer p {
-    // font-family: $main-font;
     font-size: 0.2rem;
     line-height: 1.8;
     display: inline;

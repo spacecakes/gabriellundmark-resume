@@ -1,14 +1,16 @@
 // General sidebar
 .sidebar {
   width: 200px;
+  max-width: 640px;
+  margin: auto;
   @supports (display: grid) {
     width: initial;
   }
   background-color: $sidebar-bg-color;
   border-radius: 5px;
   align-self: center;
-  @include breakpoint(tablet) {
-    border: 2px solid $highlight-color;
+  @include breakpoint(smartphone-big) {
+    margin: auto 2em;
   }
 }
 .sidebar h4 {
@@ -31,7 +33,6 @@
 .list-item {
   font-family: $sidebar-font;
   padding: 0.7em 1em;
-
   flex-basis: 100%;
   @include breakpoint(tablet) {
     flex: 1 1 40%;
@@ -55,18 +56,12 @@ img.list-item {
 
 // Contact information
 .sidebar.contact {
-  grid-area: profile-sidebar-2;
-  border-left: 2px solid $highlight-color;
-  @include breakpoint(tablet) {
-    grid-column: 1 / -1;
-    max-width: 640px;
-    margin: auto;
-    margin-top: 50px;
-    grid-row: 3;
-    text-align: center;
+  grid-area: contact;
+  @include breakpoint(desktop) {
+    border-left: 2px solid $highlight-color;
   }
-  @include breakpoint(smartphone-big) {
-    margin: 2em;
+  @include breakpoint(tablet) {
+    text-align: center;
   }
 }
 
@@ -92,48 +87,24 @@ img.list-item {
 
 // Relevant skills
 .sidebar.relevant-skills {
-  grid-area: work-sidebar-1;
-  border-right: 2px solid $highlight-color;
-  @include breakpoint(tablet) {
-    grid-row: 8;
-    grid-column: 1 / span 2;
-    margin-left: 2em;
-    margin-top: 2em;
-  }
-  @include breakpoint(smartphone-big) {
-    grid-column: 1 / -1;
-    margin: 2em;
+  grid-area: relevant-skills;
+  @include breakpoint(desktop) {
+    border-right: 2px solid $highlight-color;
   }
 }
 
 // Creations
 .sidebar.creations {
-  grid-area: edu-sidebar-1;
-  border-right: 2px solid $highlight-color;
-  @include breakpoint(tablet) {
-    grid-row: 14;
-    grid-column: 1 / -1;
-    max-width: 400px;
-    margin: 2em auto;
-  }
-  @include breakpoint(smartphone-small) {
-    margin: 2em;
+  grid-area: creations;
+  @include breakpoint(desktop) {
+    border-right: 2px solid $highlight-color;
   }
 }
 
 // Irrelevant skills
 .sidebar.other-skills {
-  grid-area: vol-sidebar-2;
-  border-left: 2px solid $highlight-color;
-  @include breakpoint(tablet) {
-    grid-row: 8;
-    grid-column: span 2 / -1;
-    margin-right: 2em;
-    margin-top: 2em;
-  }
-  @include breakpoint(smartphone-big) {
-    grid-row: 9;
-    grid-column: 1 / -1;
-    margin: 2em;
+  grid-area: other-skills;
+  @include breakpoint(desktop) {
+    border-left: 2px solid $highlight-color;
   }
 }
