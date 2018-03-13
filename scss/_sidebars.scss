@@ -55,10 +55,8 @@ img.list-item {
 
 // Contact information
 .sidebar.contact {
-  grid-column: span 1 / -1;
-  grid-row-start: 2;
+  grid-area: profile-sidebar-2;
   border-left: 2px solid $highlight-color;
-  align-self: center;
   @include breakpoint(tablet) {
     grid-column: 1 / -1;
     max-width: 640px;
@@ -94,8 +92,7 @@ img.list-item {
 
 // Relevant skills
 .sidebar.relevant-skills {
-  grid-column: 1 / span 1;
-  grid-row: 5;
+  grid-area: work-sidebar-1;
   border-right: 2px solid $highlight-color;
   @include breakpoint(tablet) {
     grid-row: 8;
@@ -111,8 +108,7 @@ img.list-item {
 
 // Creations
 .sidebar.creations {
-  grid-column: 1 / span 1;
-  grid-row: 8;
+  grid-area: edu-sidebar-1;
   border-right: 2px solid $highlight-color;
   @include breakpoint(tablet) {
     grid-row: 14;
@@ -127,7 +123,7 @@ img.list-item {
 
 // Irrelevant skills
 .sidebar.other-skills {
-  grid-column: span 1 / -1;
+  grid-area: vol-sidebar-2;
   border-left: 2px solid $highlight-color;
   @include breakpoint(tablet) {
     grid-row: 8;
