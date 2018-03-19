@@ -10,12 +10,10 @@ figure img {
   object-fit: cover;
 }
 figcaption {
-  margin-top: -22px;
   font-size: 0.6em;
   font-family: $sidebar-font;
-  margin-left: 5px;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+  margin-left: 0.6em;
+  color: $second-font-color;
   @include breakpoint(desktop) {
     margin-left: 0;
   }

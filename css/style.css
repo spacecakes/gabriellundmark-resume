@@ -230,12 +230,10 @@ figure img {
 }
 
 figcaption {
-  margin-top: -22px;
   font-size: 0.6em;
   font-family: "Nunito", sans-serif;
-  margin-left: 5px;
-  color: white;
-  text-shadow: 1px 1px 2px black;
+  margin-left: 0.6em;
+  color: #8c8c8c;
 }
 
 @media (min-width: 1025px) {
