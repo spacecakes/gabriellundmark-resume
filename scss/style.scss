@@ -11,6 +11,8 @@
 
 // General layout
 .wrapper {
+  overflow-x: hidden; //Fix for horizontal scroll when using AOS
+
   max-width: 800px;
   margin: 100px auto;
   @supports (display: grid) {
