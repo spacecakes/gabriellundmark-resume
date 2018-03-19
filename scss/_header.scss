@@ -1,5 +1,5 @@
 header {
-  grid-column: 1/-1;
+  grid-area: header;
 }
 
 .browser-warning {
@@ -25,6 +25,7 @@ header {
   height: 150px;
   width: auto;
   margin: 50px auto;
+  animation: 0.5s bounceIn;
   @include breakpoint(smartphone-big) {
     height: 100px;
   }

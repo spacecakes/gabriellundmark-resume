@@ -59,6 +59,7 @@ img.list-item {
   grid-area: contact;
   @include breakpoint(desktop) {
     border-left: 2px solid $highlight-color;
+    animation: 0.3s slideInFromRight;
   }
   @include breakpoint(tablet) {
     text-align: center;
