@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=League+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="aos/aos.css" />
 
   <title>Gabriel Lundmark CV</title>
 </head>
@@ -27,13 +28,13 @@
   <div class="wrapper">
 
     <!-- Browser warning, image and name -->
-    <header>
-      <img src="images/me.jpg" alt="" class="me">
+    <header data-aos="fade-up">
+      <img src="images/me.jpg" alt="" class="me" data-aos="zoom-out">
       <h1 class="main headline">Gabriel Lundmark</h1>
     </header>
 
     <!-- Profile section -->
-    <section class="profile">
+    <section class="profile" data-aos="fade-up">
       <h2 class="headline">Profile</h2>
 
       <p>Hello,</p>
@@ -54,7 +55,7 @@
     </section>
 
     <!-- Sidebar contact -->
-    <section class="sidebar contact">
+    <section class="sidebar contact" data-aos="fade-left">
       <h4 class="contact">Contact</h4>
       <div class="list-items contact">
         <div class="list-item contact">
@@ -83,7 +84,7 @@
       </div>
     </section>
 
-    <figure>
+    <figure data-aos="fade-up">
       <a href="https://gabriellundmark.com/creations/#Posters">
         <img src="images/hero1.jpg" alt="Hexagonal patterns poster">
       </a>
@@ -91,9 +92,9 @@
     </figure>
 
     <!-- Experience section -->
-    <blockquote> This is what I've done thus far</blockquote>
+    <blockquote data-aos="zoom-out"> This is what I've done thus far</blockquote>
 
-    <section class="work experience">
+    <section class="work experience" data-aos="fade-up">
       <h2 class="headline">Experience</h2>
 
       <h3 class="title headline">Specialist</h3>
@@ -122,7 +123,7 @@
     </section>
 
     <!-- Sidebar relevant skills -->
-    <section class="sidebar relevant-skills">
+    <section class="sidebar relevant-skills" data-aos="fade-right">
       <h4>Relevant Skills</h4>
       <div class="list-items">
         <div class="list-item">JavaScript (ES6)</div>
@@ -136,15 +137,15 @@
       </div>
     </section>
 
-    <figure>
+    <figure data-aos="fade-up">
       <img src="https://source.unsplash.com/1000x700" alt="Some placeholder I should probably replace">
       <figcaption>Not one of my creations (placeholder)</figcaption>
     </figure>
 
     <!-- Education section -->
-    <blockquote> This is the stuff I've been learning</blockquote>
+    <blockquote data-aos="zoom-out"> This is the stuff I've been learning</blockquote>
 
-    <section class="education experience">
+    <section class="education experience" data-aos="fade-up">
       <h2 class="headline">Education</h2>
 
       <h3 class="title headline">Front End Development</h3>
@@ -173,7 +174,7 @@
     </section>
 
     <!-- Sidebar creations -->
-    <section class="sidebar creations">
+    <section class="sidebar creations" data-aos="fade-right">
       <h4>Creations</h4>
       <div class="list-items">
         <div class="list-item">I make stuff. You can find some of them
@@ -186,9 +187,9 @@
     </section>
 
     <!-- Voluntary work section -->
-    <blockquote>These are other things I've done, too</blockquote>
+    <blockquote data-aos="zoom-out">These are other things I've done, too</blockquote>
 
-    <section class="volunteer experience">
+    <section class="volunteer experience" data-aos="fade-up">
       <h2 class="headline">Volunteer Work</h2>
 
       <h3 class="title headline">Student Representative</h3>
@@ -212,7 +213,7 @@
     </section>
 
     <!-- Sidebar other skills -->
-    <section class="sidebar other-skills">
+    <section class="sidebar other-skills" data-aos="fade-left">
       <h4>Less Relevant Skills</h4>
       <div class="list-items">
         <div class="list-item">Certified PADI Open Water Diver</div>
@@ -239,5 +240,8 @@
   </footer>
 </body>
 <script src="js/scripts.js"></script>
+<script src="aos/aos.js"></script>
+
+<script>    AOS.init();</script>
 
 </html>
