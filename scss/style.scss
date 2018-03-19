@@ -11,7 +11,6 @@
 
 // General layout
 .wrapper {
-  overflow-x: hidden; //Fix for horizontal scroll when using AOS
   max-width: 800px;
   margin: 100px auto;
   @supports (display: grid) {
@@ -33,6 +32,7 @@
       ". vol vol other-skills";
 
     @include breakpoint(tablet) {
+      overflow-x: hidden; //Fix for horizontal scroll when using AOS
       margin: 50px auto;
       grid-template-columns: 1fr 1fr;
 

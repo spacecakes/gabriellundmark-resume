@@ -480,7 +480,6 @@ footer p {
 }
 
 .wrapper {
-  overflow-x: hidden;
   max-width: 800px;
   margin: 100px auto;
 }
@@ -498,6 +497,7 @@ footer p {
   }
   @media (max-width: 1024px) {
     .wrapper {
+      overflow-x: hidden;
       margin: 50px auto;
       grid-template-columns: 1fr 1fr;
       grid-template-areas: "header header" "profile profile" "contact contact" "hero-1 hero-1" "quote-1 quote-1" "work work" "hero-2 hero-2" "relevant-skills other-skills" "quote-2 quote-2" "edu edu" "quote-3 quote-3" "vol vol" "creations creations";
