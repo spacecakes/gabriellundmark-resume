@@ -10,7 +10,4 @@ function loadLetter() {
 loadLetter();
 
 // Load AOS library
-AOS.init({
-    // disable: 'mobile'
-
-});
+document.addEventListener('DOMContentLoaded', () => AOS.init({}));
