@@ -15,7 +15,7 @@
   max-width: 800px;
   margin: 100px auto;
   @supports (display: grid) {
-    max-width: 1200px;
+    max-width: 1300px;
     display: grid;
     grid-gap: 50px;
     justify-content: center;
@@ -30,7 +30,8 @@
       "quote-2 quote-2 quote-2 quote-2"
       "creations edu edu ."
       "quote-3 quote-3 quote-3 quote-3"
-      ". vol vol other-skills";
+      ". vol vol other-skills"
+      ". ref ref .";
 
     @include breakpoint(tablet) {
       overflow-x: hidden; //Fix for horizontal scroll when using AOS
@@ -50,6 +51,7 @@
         "edu edu"
         "quote-3 quote-3"
         "vol vol"
+        "ref ref"
         "creations creations";
     }
     @include breakpoint(smartphone-big) {
@@ -68,14 +70,15 @@
         "edu"
         "quote-3"
         "vol"
+        "ref"
         "creations";
     }
   }
 }
 .profile,
-.experience,
 .letter {
-  max-width: 640px;
+  max-width: 600px;
+  text-align: justify;
   margin: auto;
   @include breakpoint(tablet) {
     padding: 0 2em;
@@ -101,6 +104,9 @@
 
 .volunteer.experience {
   grid-area: vol;
+}
+.references.experience {
+  grid-area: ref;
 }
 
 // Company logos (not used)

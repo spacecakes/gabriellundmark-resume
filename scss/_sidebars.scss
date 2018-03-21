@@ -17,7 +17,7 @@
   font-size: 1em;
   font-family: $sidebar-font;
   margin: 0;
-  padding: 0.7em 1em;
+  padding: 15px;
   text-align: initial;
   @include breakpoint(tablet) {
     text-align: center;
@@ -32,7 +32,7 @@
 
 .list-item {
   font-family: $sidebar-font;
-  padding: 0.7em 1em;
+  padding: 5px 15px;
   flex-basis: 100%;
   @include breakpoint(tablet) {
     flex: 1 1 40%;
@@ -78,6 +78,7 @@ img.list-item {
   display: flex;
   flex: 1 1 100%;
   justify-content: space-around;
+  padding: 10px;
 }
 .social-icons {
   height: 30px;
