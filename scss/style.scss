@@ -6,6 +6,7 @@
 @import "heroes";
 @import "header";
 @import "profile";
+@import "upload";
 @import "sidebars";
 @import "footer";
 
@@ -72,14 +73,16 @@
   }
 }
 .profile,
-.experience {
+.experience,
+.letter {
   max-width: 640px;
   margin: auto;
   @include breakpoint(tablet) {
     padding: 0 2em;
   }
 }
-.profile {
+.profile,
+.letter {
   grid-area: profile;
 }
 

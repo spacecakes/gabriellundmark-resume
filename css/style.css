@@ -294,6 +294,16 @@ header {
   }
 }
 
+.upload-controls {
+  text-align: center;
+}
+
+.upload-controls input {
+  font-size: 1em;
+  text-align: center;
+  padding: 50px;
+}
+
 .sidebar {
   width: 200px;
   max-width: 640px;
@@ -510,19 +520,22 @@ footer p {
 }
 
 .profile,
-.experience {
+.experience,
+.letter {
   max-width: 640px;
   margin: auto;
 }
 
 @media (max-width: 1024px) {
   .profile,
-  .experience {
+  .experience,
+  .letter {
     padding: 0 2em;
   }
 }
 
-.profile {
+.profile,
+.letter {
   grid-area: profile;
 }
 
