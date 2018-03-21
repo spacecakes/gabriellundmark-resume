@@ -539,6 +539,11 @@ footer p {
   grid-area: profile;
 }
 
+.profile p,
+.letter p {
+  margin: 1em;
+}
+
 .experience {
   text-align: center;
 }

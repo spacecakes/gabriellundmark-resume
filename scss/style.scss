@@ -84,6 +84,9 @@
 .profile,
 .letter {
   grid-area: profile;
+  p {
+    margin: 1em;
+  }
 }
 
 .experience {
