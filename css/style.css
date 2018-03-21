@@ -541,7 +541,7 @@ footer p {
 
 .profile p,
 .letter p {
-  margin: 1em;
+  margin: 1em 0;
 }
 
 .experience {
