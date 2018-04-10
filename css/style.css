@@ -164,7 +164,7 @@ h1 {
 
 @media (max-width: 1024px) {
   h1 {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 }
 
@@ -605,17 +605,17 @@ footer p {
     color: grey;
   }
   h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 0;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   h3 {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   h4 {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
   .work.experience h2 {
     -webkit-column-break-before: page;
@@ -630,16 +630,21 @@ footer p {
     margin: auto;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    grid-template-areas: "contact" "header" "profile" "work" "edu" "vol";
+    grid-template-areas: "contact" "header" "profile" "work" "edu" "vol" "ref";
   }
   .profile,
   .letter,
-  .experience {
-    width: 500px;
+  .experience,
+  .ref {
+    width: 400px;
+    margin: auto;
+  }
+  .sidebar,
+  footer p {
+    font-size: 0.1rem;
   }
   .sidebar.contact {
     grid-area: contact;
-    font-size: 0.2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -669,7 +674,7 @@ footer p {
     text-align: center;
   }
   footer p {
-    font-size: 0.2rem;
+    font-size: 0.1rem;
     line-height: 1.8;
     display: inline;
   }
