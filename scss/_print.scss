@@ -42,6 +42,7 @@
 
   .work.experience h2 {
     break-before: page;
+    page-break-before: always;
   }
 
   figure,
@@ -54,13 +55,13 @@
     grid-template-columns: 1fr;
     grid-gap: 10px;
     grid-template-areas:
-      "contact"
-      "header"
-      "profile"
-      "work"
-      "edu"
-      "vol"
-      "ref";
+      'contact'
+      'header'
+      'profile'
+      'work'
+      'edu'
+      'vol'
+      'ref';
   }
   .profile,
   .letter,
@@ -74,20 +75,23 @@
   footer p {
     font-size: 0.1rem;
   }
+
   .sidebar.contact {
     grid-area: contact;
     display: flex;
     justify-content: center;
     border: 0;
+    & h4 {
+      display: none;
+    }
   }
-  .sidebar.contact h4 {
-    display: none;
-  }
+
   .list-item {
     flex: 1;
-  }
-  .list-item.social {
-    display: none;
+
+    &.social {
+      display: none;
+    }
   }
 
   footer {
@@ -98,11 +102,11 @@
     padding: 0.5rem;
     margin-top: 1rem;
     text-align: center;
-  }
-  footer p {
-    font-size: 0.1rem;
-    line-height: 1.8;
-    display: inline;
+    p {
+      font-size: 0.1rem;
+      line-height: 1.8;
+      display: inline;
+    }
   }
   .web-footer {
     display: none;

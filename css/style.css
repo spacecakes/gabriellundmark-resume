@@ -631,6 +631,7 @@ footer p {
   .work.experience h2 {
     -webkit-column-break-before: page;
             break-before: page;
+    page-break-before: always;
   }
   figure,
   blockquote,
@@ -642,7 +643,7 @@ footer p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 10px;
-        grid-template-areas: "contact" "header" "profile" "work" "edu" "vol" "ref";
+        grid-template-areas: 'contact' 'header' 'profile' 'work' 'edu' 'vol' 'ref';
   }
   .profile,
   .letter,
