@@ -4,6 +4,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   min-width: 320px;
+  overflow-x: hidden;
 }
 
 ul {
@@ -159,12 +160,10 @@ h4 {
   font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 0.5em;
 }
 
 h1 {
   font-size: 5rem;
-  margin-bottom: 0;
 }
 
 @media (max-width: 1024px) {
@@ -174,7 +173,6 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
   font-size: 3em;
 }
 
@@ -186,6 +184,7 @@ h2 {
 
 h3 {
   font-size: 2em;
+  margin: 1em;
 }
 
 @media (max-width: 640px) {
@@ -195,13 +194,13 @@ h3 {
 }
 
 h4 {
-  font-size: 1.5em;
-  margin-top: 0;
+  margin: 0.6em;
+  font-size: 1.6em;
 }
 
 @media (max-width: 640px) {
   h4 {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
 
@@ -511,7 +510,7 @@ footer p {
             justify-content: center;
     -ms-grid-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
         grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
-        grid-template-areas: "header  header header header" ". profile profile contact" "hero-1 hero-1 hero-1 hero-1" "quote-1 quote-1 quote-1 quote-1" "relevant-skills work work ." "hero-2 hero-2 hero-2 hero-2" "quote-2 quote-2 quote-2 quote-2" "creations edu edu ." "quote-3 quote-3 quote-3 quote-3" ". vol vol other-skills" ". ref ref .";
+        grid-template-areas: 'header  header header header' '. profile profile contact' 'hero-1 hero-1 hero-1 hero-1' 'quote-1 quote-1 quote-1 quote-1' 'relevant-skills work work .' 'hero-2 hero-2 hero-2 hero-2' 'quote-2 quote-2 quote-2 quote-2' 'creations edu edu .' 'quote-3 quote-3 quote-3 quote-3' '. vol vol other-skills' '. ref ref .';
   }
   @media (max-width: 1024px) {
     .wrapper {
@@ -519,14 +518,14 @@ footer p {
       margin: 50px auto;
       -ms-grid-columns: 1fr 1fr;
           grid-template-columns: 1fr 1fr;
-          grid-template-areas: "header header" "profile profile" "contact contact" "hero-1 hero-1" "quote-1 quote-1" "work work" "hero-2 hero-2" "relevant-skills other-skills" "quote-2 quote-2" "edu edu" "quote-3 quote-3" "vol vol" "ref ref" "creations creations";
+          grid-template-areas: 'header header' 'profile profile' 'contact contact' 'hero-1 hero-1' 'quote-1 quote-1' 'work work' 'hero-2 hero-2' 'relevant-skills other-skills' 'quote-2 quote-2' 'edu edu' 'quote-3 quote-3' 'vol vol' 'ref ref' 'creations creations';
     }
   }
   @media (max-width: 640px) {
     .wrapper {
       -ms-grid-columns: 1fr;
           grid-template-columns: 1fr;
-          grid-template-areas: "header" "profile" "contact" "hero-1" "quote-1" "work" "hero-2" "relevant-skills" "other-skills" "quote-2" "edu" "quote-3" "vol" "ref" "creations";
+          grid-template-areas: 'header' 'profile' 'contact' 'hero-1' 'quote-1' 'work' 'hero-2' 'relevant-skills' 'other-skills' 'quote-2' 'edu' 'quote-3' 'vol' 'ref' 'creations';
     }
   }
 }
@@ -573,11 +572,6 @@ footer p {
 
 .references.experience {
   grid-area: ref;
-}
-
-.logo {
-  height: 30px;
-  display: none;
 }
 
 .date {

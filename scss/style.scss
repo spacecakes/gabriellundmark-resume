@@ -1,14 +1,14 @@
-@import "reset";
-@import "mixins";
-@import "variables";
-@import "animations";
-@import "texts";
-@import "heroes";
-@import "header";
-@import "profile";
-@import "upload";
-@import "sidebars";
-@import "footer";
+@import 'reset';
+@import 'mixins';
+@import 'variables';
+@import 'animations';
+@import 'texts';
+@import 'heroes';
+@import 'header';
+@import 'profile';
+@import 'upload';
+@import 'sidebars';
+@import 'footer';
 
 // General layout
 .wrapper {
@@ -21,17 +21,17 @@
     justify-content: center;
     grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
     grid-template-areas:
-      "header  header header header"
-      ". profile profile contact"
-      "hero-1 hero-1 hero-1 hero-1"
-      "quote-1 quote-1 quote-1 quote-1"
-      "relevant-skills work work ."
-      "hero-2 hero-2 hero-2 hero-2"
-      "quote-2 quote-2 quote-2 quote-2"
-      "creations edu edu ."
-      "quote-3 quote-3 quote-3 quote-3"
-      ". vol vol other-skills"
-      ". ref ref .";
+      'header  header header header'
+      '. profile profile contact'
+      'hero-1 hero-1 hero-1 hero-1'
+      'quote-1 quote-1 quote-1 quote-1'
+      'relevant-skills work work .'
+      'hero-2 hero-2 hero-2 hero-2'
+      'quote-2 quote-2 quote-2 quote-2'
+      'creations edu edu .'
+      'quote-3 quote-3 quote-3 quote-3'
+      '. vol vol other-skills'
+      '. ref ref .';
 
     @include breakpoint(tablet) {
       overflow-x: hidden; //Fix for horizontal scroll when using AOS
@@ -39,39 +39,39 @@
       grid-template-columns: 1fr 1fr;
 
       grid-template-areas:
-        "header header"
-        "profile profile"
-        "contact contact"
-        "hero-1 hero-1"
-        "quote-1 quote-1"
-        "work work"
-        "hero-2 hero-2"
-        "relevant-skills other-skills"
-        "quote-2 quote-2"
-        "edu edu"
-        "quote-3 quote-3"
-        "vol vol"
-        "ref ref"
-        "creations creations";
+        'header header'
+        'profile profile'
+        'contact contact'
+        'hero-1 hero-1'
+        'quote-1 quote-1'
+        'work work'
+        'hero-2 hero-2'
+        'relevant-skills other-skills'
+        'quote-2 quote-2'
+        'edu edu'
+        'quote-3 quote-3'
+        'vol vol'
+        'ref ref'
+        'creations creations';
     }
     @include breakpoint(smartphone-big) {
       grid-template-columns: 1fr;
       grid-template-areas:
-        "header"
-        "profile"
-        "contact"
-        "hero-1"
-        "quote-1"
-        "work"
-        "hero-2"
-        "relevant-skills"
-        "other-skills"
-        "quote-2"
-        "edu"
-        "quote-3"
-        "vol"
-        "ref"
-        "creations";
+        'header'
+        'profile'
+        'contact'
+        'hero-1'
+        'quote-1'
+        'work'
+        'hero-2'
+        'relevant-skills'
+        'other-skills'
+        'quote-2'
+        'edu'
+        'quote-3'
+        'vol'
+        'ref'
+        'creations';
     }
   }
 }
@@ -109,12 +109,6 @@
   grid-area: ref;
 }
 
-// Company logos (not used)
-.logo {
-  height: 30px;
-  display: none;
-}
-
 .date {
   font-size: 1em;
   color: $second-font-color;
@@ -124,4 +118,4 @@
 }
 
 // Print layout tweaks
-@import "print";
+@import 'print';
