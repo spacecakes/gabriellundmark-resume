@@ -1,20 +1,15 @@
-// Footer
 footer {
   border-top: 2px solid $highlight-color;
   grid-column: 1/-1;
   background-color: $sidebar-bg-color;
   padding: 4em 0;
   width: 100%;
-}
-footer p {
-  font-family: $sidebar-font;
-  font-size: 0.7em;
-  max-width: 500px;
-  margin: auto;
-  list-style: none;
-  text-align: center;
-}
 
-.print-footer {
-  display: none;
+  p {
+    font-family: $sidebar-font;
+    font-size: 0.7em;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+  }
 }

@@ -17,24 +17,12 @@
 
     <title>Gabriel Lundmark Resume</title>
   </head>
-  <div class="browser-warning">
-    <p>
-      Your browser is too old to render this site properly! 😢 <br />Or I'm too
-      lazy to make optimizations. In any case, you should update or
-      <a href="http://gabriellundmark.com/retro">
-        visit my IE optimized site.</a
-      >
-    </p>
-  </div>
-
-  <!-- TODO: Rewrite everything in Gatsby. This is getting old.  -->
 
   <body>
     <div class="wrapper">
-      <!-- Browser warning, image and name -->
       <header data-aos="fade-up">
         <img src="images/me.jpg" alt="" class="me" data-aos="zoom-out" />
-        <h1 class="main headline">Gabriel Lundmark</h1>
+        <h1>Gabriel Lundmark</h1>
       </header>
 
       <!-- Profile section -->
@@ -46,7 +34,7 @@
         <p>I'm Gabriel, a front-end developer and ex-retail guy.</p>
 
         <p>
-          I'm straightforward, get things done, and I do them well. Some say I'm
+          I'm straightforward, get things done, and do them well. Some say I'm
           pretty funny too! I’m passionate about software, UX and engineering.
           I’m a curious tinkerer and a meticulous perfectionist. An IT nerd that
           missed the bubble. I'm expressive and write pretty well, and I like to
@@ -68,34 +56,39 @@
       <!-- Sidebar contact -->
       <section class="sidebar contact" data-aos="fade-left">
         <h4 class="contact">Contact</h4>
-        <ul class="list-items contact">
-          <li class="list-item contact">
-            <a href="mailto:hello@gabriellundmark.com"
-              >hello@gabriellundmark.com</a
-            >
+        <ul>
+          <li>
+            <a href="mailto:hello@gabriellundmark.com">
+              hello@gabriellundmark.com
+            </a>
           </li>
-          <li class="list-item contact">
-            <a href="http://www.gabriellundmark.com">gabriellundmark.com</a>
-          </li>
-          <li class="list-item contact">
-            <a href="tel:+46706023058">+46-706 02 30 58</a>
-          </li>
-          <li class="list-item social">
-            <a href="http://linkedin.com/in/gabriellundmark" class="social">
+
+          <li>
+            <a href="tel:+46706023058">
               <img
-                class="social-icons"
-                src="images/social/linkedin.svg"
-                alt=""
+                class="social-icon"
+                src="images/social/phone.svg"
+                alt="Phone icon"
               />
             </a>
-            <a href="http://github.com/spacecakes" class="social">
-              <img class="social-icons" src="images/social/github.svg" alt="" />
-            </a>
-            <a href="http://twitter.com/grushamster" class="social">
+          </li>
+
+          <li>
+            <a href="http://linkedin.com/in/gabriellundmark">
               <img
-                class="social-icons"
-                src="images/social/twitter.svg"
-                alt=""
+                class="social-icon"
+                src="images/social/linkedin.svg"
+                alt="LinkedIn icon"
+              />
+            </a>
+          </li>
+
+          <li>
+            <a href="http://github.com/spacecakes">
+              <img
+                class="social-icon"
+                src="images/social/github.svg"
+                alt="GitHub icon"
               />
             </a>
           </li>
@@ -103,9 +96,7 @@
       </section>
 
       <figure data-aos="fade-up">
-        <a href="https://gabriellundmark.com/creations/#Posters">
-          <img src="images/hero1.jpg" alt="Hexagonal patterns poster" />
-        </a>
+        <img src="images/hero1.jpg" alt="Hexagonal patterns poster" />
         <figcaption>One of my creations</figcaption>
       </figure>
 
@@ -117,30 +108,15 @@
       <section class="work experience" data-aos="fade-up">
         <h2>Experience</h2>
 
-        <h3>We ahead</h3>
-        <h4>Front-end Lead</h4>
-        <p class="date">2020 - Present</p>
-        <p class="description">
-          Front-end Lead and mentor on internal project
-        </p>
-
-        <h4>Course Instructor at Folksam</h4>
-        <p class="date">2020</p>
-        <p class="description">
-          Helped develop and present a 12 week course in React & CSS Grid
-        </p>
-
-        <h4>Course Instructor at Nackademin</h4>
-        <p class="date">2019 - 2020</p>
-        <p class="description">
-          Developed and presented a course in HTML & CSS
-        </p>
-
-        <h4>Front-end Developer</h4>
+        <h3>ManyPets (Bought by Many)</h3>
+        <h4>JavaScript Engineer</h4>
         <p class="date">2019 - Present</p>
-        <p class="description">
-          I've worked on multiple internal projects
-        </p>
+        <p class="description">I make awesome web apps</p>
+
+        <h3>We ahead</h3>
+        <h4>Front-end Developer</h4>
+        <p class="date">2019 - 2020</p>
+        <p class="description">Development, tech lead & course instructor</p>
 
         <h4>Intern</h4>
         <p class="date">2019</p>
@@ -151,17 +127,14 @@
 
         <h3>IKEA</h3>
         <h4>Specialist</h4>
-        <p class="date">2014 - 2015 & 2017 - Present</p>
-        <p class="description">
-          Second round as part-timer at IKEA, concurrently with studies
-        </p>
+        <p class="date">2014 - 2015 & 2017 - 2019</p>
+        <p class="description">Part-time at IKEA, concurrently with studies</p>
 
         <h3>Digital Inn</h3>
         <h4>Store Manager</h4>
         <p class="date">2015 - 2016</p>
         <p class="description">
-          Responsibility for targets, recruitment, customer satisfaction,
-          training
+          Responsibility for targets, staff, customer satisfaction & training
         </p>
 
         <h3>Apple</h3>
@@ -179,29 +152,23 @@
       </section>
 
       <!-- Sidebar relevant skills -->
-      <section class="sidebar relevant-skills" data-aos="fade-right">
+      <section class="sidebar rel-skills" data-aos="fade-right">
         <h4>Relevant Skills</h4>
-        <ul class="list-items">
-          <li class="list-item">React & Vue</li>
-          <li class="list-item">Gatsby.js & Next.js</li>
-          <li class="list-item">Headless CMS</li>
-          <li class="list-item">Vanilla JS</li>
-          <li class="list-item">
-            Modern CSS (incl. pre-processors) & semantic HTML
-          </li>
-          <li class="list-item">Theme UI, Emotion & Styled Components</li>
-          <li class="list-item">GraphQL & REST</li>
-          <li class="list-item">TDD with Jest, Enzyme, Cypress & RTL</li>
-          <li class="list-item">
-            DevOps (deployment, virtualization, networking)
-          </li>
-          <li class="list-item">Agile methods & Scrum</li>
-          <li class="list-item">Graphic design (Sketch & Adobe CC)</li>
-          <li class="list-item"><em>Some</em> PHP, mySQL & Wordpress</li>
-          <li class="list-item">
-            10+ years of leadership experience
-          </li>
-          <li class="list-item">20+ years of computer nerdery</li>
+        <ul>
+          <li>JS frameworks, like React & Vue</li>
+          <li>SSG:s like Gatsby.js, Next.js & Nuxt.js</li>
+          <li>Plain vanilla JS too</li>
+          <li>CSS (I did use to be an instructor after all)</li>
+          <li>Good at CSS-in-JS, like Theme UI & Styled Components</li>
+          <li>Good at GraphQL & REST</li>
+          <li>Big fan of test-driven development</li>
+          <li>Not terrible DevOps skills</li>
+          <li>Not terrible CMS knowledge</li>
+          <li>Agile methods & Scrum</li>
+          <li>A pretty good graphical designer</li>
+          <li><em>Some</em> PHP & mySQL skills</li>
+          <li>10+ years of leadership experience</li>
+          <li>20+ years of general computer nerdery</li>
         </ul>
       </section>
 
@@ -223,9 +190,7 @@
         <h3>Nackademin</h3>
         <h4>Front-end Development</h4>
         <p class="date">2017 - 2019</p>
-        <p class="description">
-          Modern front-end development with a focus on JavaScript and CSS
-        </p>
+        <p class="description">Modern front-end development</p>
 
         <h3>Royal Institute of Technology</h3>
         <h4>Computer Science</h4>
@@ -237,38 +202,39 @@
         <h3>NTI-skolan</h3>
         <h4>Computer Science & Graphical Design</h4>
         <p class="date">2014 - 2015 & 2017</p>
-        <p class="description">
-          .NET development and graphical design
-        </p>
+        <p class="description">.NET development and graphical design</p>
 
         <h3>IT-Gymnasiet</h3>
         <h4>Science and Technology</h4>
         <p class="date">2003 - 2005</p>
-        <p class="description">High school focused on IT and science</p>
+        <p class="description">High-school focused on IT & science</p>
       </section>
 
       <!-- Sidebar creations -->
       <section class="sidebar creations" data-aos="fade-right">
         <h4>Projects</h4>
-        <ul class="list-items">
-          <li class="list-item">
-            I make stuff. Not just websites, but here are some I've worked on:
+
+        <ul>
+          <li>
+            I make stuff—not just websites. Here are some I've worked on,
+            though:
           </li>
-          <li class="list-item">
-            <a href="//www.gabriellundmark.com">gabriellundmark.com</a>
+          <li>
+            <a href="//manypets.com/se">ManyPets</a>
           </li>
-          <li class="list-item">
-            <a href="//www.indutradeportal.com/">Indutrade Portal</a>
-          </li>
-          <li class="list-item">
-            <a href="//www.adv-aberg.se">Advokat Åberg</a>
-          </li>
-          <li class="list-item">
+          <li>
             <a href="//www.carcalc.se">CarCalc</a>
           </li>
-          <li class="list-item">
-            ...and some that have yet to launch!
+          <li>
+            <a href="//www.indutradeportal.com/">Indutrade Portal</a>
           </li>
+          <li>
+            <a href="//www.weahead.se/">We ahead</a>
+          </li>
+          <li>
+            <a href="//www.adv-aberg.se">Advokat Åberg</a>
+          </li>
+          <li>...and some more that I should probably put here.</li>
         </ul>
       </section>
 
@@ -283,16 +249,12 @@
         <h3>Nackademin</h3>
         <h4>Student Representative</h4>
         <p class="date">2017 - 2019</p>
-        <p class="description">
-          Representing at board meetings and events
-        </p>
+        <p class="description">Representing at board meetings and events</p>
 
         <h3>Brf Snickarboa</h3>
         <h4>Chairman</h4>
         <p class="date">2015 - Present</p>
-        <p class="description">
-          I make improvements and decisions
-        </p>
+        <p class="description">I make improvements and decisions</p>
 
         <h3>NordicHardware</h3>
         <h4>Editor in Chief</h4>
@@ -305,13 +267,13 @@
       <!-- Sidebar other skills -->
       <section class="sidebar other-skills" data-aos="fade-left">
         <h4>Probably Less Relevant Skills</h4>
-        <ul class="list-items">
-          <li class="list-item">Certified PADI Open Water Diver</li>
-          <li class="list-item">Certified forklift operator</li>
-          <li class="list-item">Certified Apple Sales Professional</li>
-          <li class="list-item">Driving license holder</li>
-          <li class="list-item">Amateur DJ & video editor</li>
-          <li class="list-item">Dad</li>
+        <ul>
+          <li>Certified PADI Open Water Diver</li>
+          <li>Certified forklift operator</li>
+          <li>Certified Apple Sales Professional</li>
+          <li>Driving license holder</li>
+          <li>Amateur DJ & video editor</li>
+          <li>Dad</li>
         </ul>
       </section>
 
@@ -328,20 +290,8 @@
     </div>
 
     <footer>
-      <p class="web-footer">It's so cool that you're here!</p>
-      <p class="print-footer">
-        You can always find the latest version of my resume at:
-        <a href="http://www.gabriellundmark.com/cv"
-          >www.gabriellundmark.com/cv.</a
-        >
-      </p>
-      <p>
-        <a href="mailto:hello@gabriellundmark.com">hello@gabriellundmark.com</a>
-        or
-        <a href="tel:+46706023058">+46-706 02 30 58.</a>
-      </p>
       <p>Looking forward to hearing from you.</p>
-      <p>© 2020</p>
+      <p class="copyright">© 2018</p>
     </footer>
   </body>
   <script src="aos/aos.js"></script>

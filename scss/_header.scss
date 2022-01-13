@@ -1,31 +1,15 @@
 header {
   grid-area: header;
-}
 
-.browser-warning {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  font-size: 10px;
-}
+  img.me {
+    display: block;
+    border-radius: 50%;
+    height: 150px;
+    width: auto;
+    margin: 50px auto;
 
-@supports (display: flex) {
-  .browser-warning {
-    display: none;
-  }
-}
-.me {
-  display: block;
-  border-radius: 50%;
-  height: 150px;
-  width: auto;
-  margin: 50px auto;
-  @include breakpoint(smartphone-big) {
-    height: 100px;
+    @include breakpoint(smartphone-big) {
+      height: 100px;
+    }
   }
 }

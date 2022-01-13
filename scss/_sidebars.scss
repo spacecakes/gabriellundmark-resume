@@ -1,111 +1,87 @@
-// General sidebar
 .sidebar {
-  width: 200px;
   max-width: 640px;
   margin: auto;
-  @supports (display: grid) {
-    width: initial;
-  }
   background-color: $sidebar-bg-color;
   border-radius: 5px;
   align-self: center;
+  padding: 1em;
+
   @include breakpoint(smartphone-big) {
     margin: auto 2em;
   }
-}
-.sidebar h4 {
-  font-size: 1em;
-  font-family: $sidebar-font;
-  margin: 0;
-  padding: 15px;
-  text-align: initial;
-  @include breakpoint(tablet) {
-    text-align: center;
-  }
-}
 
-.list-items {
-  font-size: 0.9em;
-  display: flex;
-  flex-wrap: wrap;
-}
+  ul {
+    font-size: 0.9em;
+    display: grid;
+    gap: 1em;
+    list-style-type: square;
+    margin: 0;
+    padding: 0 0 0 1em;
 
-.list-item {
-  font-family: $sidebar-font;
-  padding: 5px 15px;
-  flex-basis: 100%;
-  @include breakpoint(tablet) {
-    flex: 1 1 40%;
+    li {
+      font-family: $sidebar-font;
+    }
   }
-  @include breakpoint(smartphone-small) {
-    flex: 1 1 100%;
-  }
-}
-img.list-item {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: 250px;
-  padding: 0;
-  margin-top: 0.7em;
-  border-radius: 0 0 5px 5px;
-  @include breakpoint(tablet) {
-    display: none;
-  }
-}
 
-// Contact information
-.sidebar.contact {
-  grid-area: contact;
-  @include breakpoint(desktop) {
-    border-left: 2px solid $highlight-color;
-  }
-  @include breakpoint(tablet) {
-    text-align: center;
-  }
-}
+  h4 {
+    font-size: 1em;
+    font-family: $sidebar-font;
+    margin: 0 0 1em 0;
+    text-align: initial;
 
-.list-item.contact {
-  @include breakpoint(tablet) {
-    flex: 1 20%;
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
   }
-  @include breakpoint(smartphone-big) {
-    flex: 1 100%;
+
+  .social-icon {
+    height: 30px;
+    width: 100%;
+    display: block;
   }
-}
 
-.list-item.social {
-  display: flex;
-  flex: 1 1 100%;
-  justify-content: space-around;
-  padding: 10px;
-}
-.social-icons {
-  height: 30px;
-  width: 100%;
-  display: block;
-}
+  &.contact {
+    grid-area: contact;
 
-// Relevant skills
-.sidebar.relevant-skills {
-  grid-area: relevant-skills;
-  @include breakpoint(desktop) {
-    border-right: 2px solid $highlight-color;
+    @include breakpoint(desktop) {
+      border-left: 2px solid $highlight-color;
+    }
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
+
+    ul {
+      grid-template-columns: repeat(3, 1fr);
+      list-style: none;
+      padding: 0;
+
+      li:first-child {
+        grid-column: 1 / -1;
+      }
+    }
   }
-}
 
-// Creations
-.sidebar.creations {
-  grid-area: creations;
-  @include breakpoint(desktop) {
-    border-right: 2px solid $highlight-color;
+  &.rel-skills {
+    grid-area: rel-skills;
+
+    @include breakpoint(desktop) {
+      border-right: 2px solid $highlight-color;
+    }
   }
-}
 
-// Irrelevant skills
-.sidebar.other-skills {
-  grid-area: other-skills;
-  @include breakpoint(desktop) {
-    border-left: 2px solid $highlight-color;
+  &.creations {
+    grid-area: creations;
+
+    @include breakpoint(desktop) {
+      border-right: 2px solid $highlight-color;
+    }
+  }
+
+  &.other-skills {
+    grid-area: other-skills;
+
+    @include breakpoint(desktop) {
+      border-left: 2px solid $highlight-color;
+    }
   }
 }

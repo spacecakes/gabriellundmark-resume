@@ -1,17 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  min-width: 320px;
-  overflow-x: hidden;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -130,97 +116,6 @@ ul {
   }
 }
 
-p {
-  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
-  line-height: 2;
-  font-size: 1.4em;
-  font-weight: 300;
-  margin: 0;
-}
-
-@media (max-width: 1024px) {
-  p {
-    font-size: 1.2em;
-  }
-}
-
-a,
-a:visited,
-a:hover,
-a:active {
-  -webkit-text-decoration: underline wavy #76b4c8;
-          text-decoration: underline wavy #76b4c8;
-  color: inherit;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
-  font-weight: 300;
-  text-align: center;
-}
-
-h1 {
-  font-size: 5rem;
-}
-
-@media (max-width: 1024px) {
-  h1 {
-    font-size: 8vw;
-  }
-}
-
-h2 {
-  font-size: 3em;
-}
-
-@media (max-width: 640px) {
-  h2 {
-    font-size: 2em;
-  }
-}
-
-h3 {
-  font-size: 2em;
-  margin: 1em;
-}
-
-@media (max-width: 640px) {
-  h3 {
-    font-size: 1.5em;
-  }
-}
-
-h4 {
-  margin: 0.6em;
-  font-size: 1.6em;
-}
-
-@media (max-width: 640px) {
-  h4 {
-    font-size: 1.3em;
-  }
-}
-
-blockquote {
-  margin: 0;
-  font-weight: 300;
-  text-align: center;
-  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
-  grid-column: 1 / -1;
-  font-style: italic;
-  color: #76b4c8;
-  font-size: 5em;
-}
-
-@media (max-width: 1024px) {
-  blockquote {
-    font-size: 10vw;
-  }
-}
-
 figure {
   grid-column: 1 /-1;
   margin: 0;
@@ -250,25 +145,7 @@ header {
   grid-area: header;
 }
 
-.browser-warning {
-  position: relative;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  font-size: 10px;
-}
-
-@supports (display: flex) {
-  .browser-warning {
-    display: none;
-  }
-}
-
-.me {
+header img.me {
   display: block;
   border-radius: 50%;
   height: 150px;
@@ -277,39 +154,12 @@ header {
 }
 
 @media (max-width: 640px) {
-  .me {
+  header img.me {
     height: 100px;
   }
 }
 
-.profile img:last-of-type,
-.letter img:last-of-type {
-  -webkit-transform: rotate(-4deg);
-      -ms-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-  width: 200px;
-  margin-top: 50px;
-}
-
-@media (max-width: 640px) {
-  .profile img:last-of-type,
-  .letter img:last-of-type {
-    width: 150px;
-  }
-}
-
-.upload-controls {
-  text-align: center;
-}
-
-.upload-controls input {
-  font-size: 1em;
-  text-align: center;
-  padding: 50px;
-}
-
 .sidebar {
-  width: 200px;
   max-width: 640px;
   margin: auto;
   background-color: rgba(0, 0, 0, 0.03);
@@ -317,12 +167,7 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-}
-
-@supports ((display: -ms-grid) or (display: grid)) {
-  .sidebar {
-    width: initial;
-  }
+  padding: 1em;
 }
 
 @media (max-width: 640px) {
@@ -331,11 +176,24 @@ header {
   }
 }
 
+.sidebar ul {
+  font-size: 0.9em;
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  list-style-type: square;
+  margin: 0;
+  padding: 0 0 0 1em;
+}
+
+.sidebar ul li {
+  font-family: "Nunito", sans-serif;
+}
+
 .sidebar h4 {
   font-size: 1em;
   font-family: "Nunito", sans-serif;
-  margin: 0;
-  padding: 15px;
+  margin: 0 0 1em 0;
   text-align: initial;
 }
 
@@ -345,52 +203,10 @@ header {
   }
 }
 
-.list-items {
-  font-size: 0.9em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.list-item {
-  font-family: "Nunito", sans-serif;
-  padding: 5px 15px;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-}
-
-@media (max-width: 1024px) {
-  .list-item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 40%;
-            flex: 1 1 40%;
-  }
-}
-
-@media (max-width: 480px) {
-  .list-item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
-  }
-}
-
-img.list-item {
-  display: block;
+.sidebar .social-icon {
+  height: 30px;
   width: 100%;
-  height: 100%;
-  max-width: 250px;
-  padding: 0;
-  margin-top: 0.7em;
-  border-radius: 0 0 5px 5px;
-}
-
-@media (max-width: 1024px) {
-  img.list-item {
-    display: none;
-  }
+  display: block;
 }
 
 .sidebar.contact {
@@ -409,46 +225,23 @@ img.list-item {
   }
 }
 
-@media (max-width: 1024px) {
-  .list-item.contact {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 20%;
-            flex: 1 20%;
-  }
+.sidebar.contact ul {
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+  padding: 0;
 }
 
-@media (max-width: 640px) {
-  .list-item.contact {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 100%;
-            flex: 1 100%;
-  }
+.sidebar.contact ul li:first-child {
+  grid-column: 1 / -1;
 }
 
-.list-item.social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 10px;
-}
-
-.social-icons {
-  height: 30px;
-  width: 100%;
-  display: block;
-}
-
-.sidebar.relevant-skills {
-  grid-area: relevant-skills;
+.sidebar.rel-skills {
+  grid-area: rel-skills;
 }
 
 @media (min-width: 1025px) {
-  .sidebar.relevant-skills {
+  .sidebar.rel-skills {
     border-right: 2px solid #76b4c8;
   }
 }
@@ -486,103 +279,7 @@ footer p {
   font-size: 0.7em;
   max-width: 500px;
   margin: auto;
-  list-style: none;
   text-align: center;
-}
-
-.print-footer {
-  display: none;
-}
-
-.wrapper {
-  max-width: 800px;
-  margin: 100px auto;
-}
-
-@supports ((display: -ms-grid) or (display: grid)) {
-  .wrapper {
-    max-width: 1300px;
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 50px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-grid-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
-        grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
-        grid-template-areas: 'header  header header header' '. profile profile contact' 'hero-1 hero-1 hero-1 hero-1' 'quote-1 quote-1 quote-1 quote-1' 'relevant-skills work work .' 'hero-2 hero-2 hero-2 hero-2' 'quote-2 quote-2 quote-2 quote-2' 'creations edu edu .' 'quote-3 quote-3 quote-3 quote-3' '. vol vol other-skills' '. ref ref .';
-  }
-  @media (max-width: 1024px) {
-    .wrapper {
-      overflow-x: hidden;
-      margin: 50px auto;
-      -ms-grid-columns: 1fr 1fr;
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas: 'header header' 'profile profile' 'contact contact' 'hero-1 hero-1' 'quote-1 quote-1' 'work work' 'hero-2 hero-2' 'relevant-skills other-skills' 'quote-2 quote-2' 'edu edu' 'quote-3 quote-3' 'vol vol' 'ref ref' 'creations creations';
-    }
-  }
-  @media (max-width: 640px) {
-    .wrapper {
-      -ms-grid-columns: 1fr;
-          grid-template-columns: 1fr;
-          grid-template-areas: 'header' 'profile' 'contact' 'hero-1' 'quote-1' 'work' 'hero-2' 'relevant-skills' 'other-skills' 'quote-2' 'edu' 'quote-3' 'vol' 'ref' 'creations';
-    }
-  }
-}
-
-.profile,
-.letter {
-  max-width: 600px;
-  text-align: justify;
-  margin: auto;
-}
-
-@media (max-width: 1024px) {
-  .profile,
-  .letter {
-    padding: 0 2em;
-  }
-}
-
-.profile,
-.letter {
-  grid-area: profile;
-}
-
-.profile p,
-.letter p {
-  margin: 1em 0;
-}
-
-.experience {
-  text-align: center;
-}
-
-.work.experience {
-  grid-area: work;
-}
-
-.education.experience {
-  grid-area: edu;
-}
-
-.volunteer.experience {
-  grid-area: vol;
-}
-
-.references.experience {
-  grid-area: ref;
-}
-
-.date {
-  font-size: 1em;
-  color: #8c8c8c;
-}
-
-@media (max-width: 640px) {
-  .date {
-    font-size: 0.8em;
-  }
 }
 
 @media print {
@@ -601,7 +298,6 @@ footer p {
     line-height: 1.5;
     font-size: 0.4rem;
   }
-  .letter p,
   .profile p {
     font-size: 0.9rem;
   }
@@ -637,10 +333,9 @@ footer p {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-gap: 10px;
-        grid-template-areas: 'contact' 'header' 'profile' 'work' 'edu' 'vol' 'ref';
+        grid-template-areas: "contact" "header" "profile" "work" "edu" "vol" "ref";
   }
   .profile,
-  .letter,
   .experience,
   .ref {
     width: 400px;
@@ -665,14 +360,6 @@ footer p {
   .sidebar.contact h4 {
     display: none;
   }
-  .list-item {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-  }
-  .list-item.social {
-    display: none;
-  }
   footer {
     border: 0;
     width: 400px;
@@ -687,10 +374,193 @@ footer p {
     line-height: 1.8;
     display: inline;
   }
-  .web-footer {
-    display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  line-height: 2;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  p {
+    font-size: 1.2em;
   }
-  .print-footer {
-    display: block;
+}
+
+p.date {
+  font-size: 1em;
+  color: #8c8c8c;
+}
+
+@media (max-width: 640px) {
+  p.date {
+    font-size: 0.8em;
   }
+}
+
+p + p {
+  margin-top: 0.5em;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  -webkit-text-decoration: underline wavy #76b4c8;
+          text-decoration: underline wavy #76b4c8;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 8vw;
+  }
+}
+
+h2 {
+  margin: 1em 0 0.6em 0;
+  font-size: 3em;
+}
+
+@media (max-width: 640px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 2em;
+  margin: 1em 0 0.6em 0;
+}
+
+@media (max-width: 640px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  margin: 0.6em 0 0.4em 0;
+  font-size: 1.6em;
+}
+
+@media (max-width: 640px) {
+  h4 {
+    font-size: 1.3em;
+  }
+}
+
+blockquote {
+  margin: 0.2em;
+  font-weight: 300;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, "Times New Roman", Times, serif;
+  grid-column: 1 / -1;
+  font-style: italic;
+  color: #76b4c8;
+  font-size: 5em;
+}
+
+@media (max-width: 1024px) {
+  blockquote {
+    font-size: 10vw;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 100px auto;
+  max-width: 1300px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid: "header             header  header  header" ".                  profile profile contact" "hero-1             hero-1  hero-1  hero-1" "quote-1            quote-1 quote-1 quote-1" "rel-skills         work    work    ." "hero-2             hero-2  hero-2  hero-2" "quote-2            quote-2 quote-2 quote-2" "creations          edu     edu     ." "quote-3            quote-3 quote-3 quote-3" ".                  vol     vol     other-skills" ".                  ref     ref     ."/minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    overflow-x: hidden;
+    margin: 50px auto;
+    grid: "header     header" "profile    profile" "contact    contact" "hero-1     hero-1" "quote-1    quote-1" "work       work" "hero-2     hero-2" "rel-skills other-skills" "quote-2    quote-2" "edu        edu" "quote-3    quote-3" "vol        vol" "ref        ref" "creations  creations" / 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    grid: "header" "profile" "contact" "hero-1" "quote-1" "work" "hero-2" "rel-skills" "other-skills" "quote-2" "edu" "quote-3" "vol" "ref" "creations" / 1fr;
+  }
+}
+
+.profile {
+  max-width: 600px;
+  text-align: justify;
+  margin: auto;
+  grid-area: profile;
+}
+
+.profile img:last-of-type {
+  -webkit-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+  width: 200px;
+  margin-top: 50px;
+}
+
+@media (max-width: 640px) {
+  .profile img:last-of-type {
+    width: 150px;
+  }
+}
+
+section {
+  padding: 2em;
+}
+
+section.experience {
+  text-align: center;
+}
+
+section.experience.work {
+  grid-area: work;
+}
+
+section.experience.education {
+  grid-area: edu;
+}
+
+section.experience.volunteer {
+  grid-area: vol;
+}
+
+section.experience.references {
+  grid-area: ref;
 }

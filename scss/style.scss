@@ -1,121 +1,208 @@
-@import 'reset';
-@import 'mixins';
-@import 'variables';
-@import 'animations';
-@import 'texts';
-@import 'heroes';
-@import 'header';
-@import 'profile';
-@import 'upload';
-@import 'sidebars';
-@import 'footer';
+@import "mixins";
+@import "variables";
+@import "animations";
+@import "heroes";
+@import "header";
+@import "sidebars";
+@import "footer";
+@import "print";
 
-// General layout
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+p {
+  font-family: $main-font;
+  line-height: 2;
+  font-size: 1.4em;
+  font-weight: 300;
+  margin: 0;
+
+  @include breakpoint(tablet) {
+    font-size: 1.2em;
+  }
+
+  &.date {
+    font-size: 1em;
+    color: $second-font-color;
+
+    @include breakpoint(smartphone-big) {
+      font-size: 0.8em;
+    }
+  }
+
+  & + p {
+    margin-top: 0.5em;
+  }
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: underline wavy $highlight-color;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $main-font;
+  font-weight: 300;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5rem;
+
+  @include breakpoint(tablet) {
+    font-size: 8vw;
+  }
+}
+
+h2 {
+  margin: 1em 0 0.6em 0;
+  font-size: 3em;
+
+  @include breakpoint(smartphone-big) {
+    font-size: 2em;
+  }
+}
+
+h3 {
+  font-size: 2em;
+  margin: 1em 0 0.6em 0;
+
+  @include breakpoint(smartphone-big) {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  margin: 0.6em 0 0.4em 0;
+  font-size: 1.6em;
+  @include breakpoint(smartphone-big) {
+    font-size: 1.3em;
+  }
+}
+
+blockquote {
+  margin: 0.2em;
+  font-weight: 300;
+  text-align: center;
+  font-family: $main-font;
+  grid-column: 1 / -1;
+  font-style: italic;
+  color: $highlight-color;
+  font-size: 5em;
+
+  @include breakpoint(tablet) {
+    font-size: 10vw;
+  }
+}
+
 .wrapper {
   max-width: 800px;
   margin: 100px auto;
-  @supports (display: grid) {
-    max-width: 1300px;
-    display: grid;
-    grid-gap: 50px;
-    justify-content: center;
-    grid-template-columns: minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
-    grid-template-areas:
-      'header  header header header'
-      '. profile profile contact'
-      'hero-1 hero-1 hero-1 hero-1'
-      'quote-1 quote-1 quote-1 quote-1'
-      'relevant-skills work work .'
-      'hero-2 hero-2 hero-2 hero-2'
-      'quote-2 quote-2 quote-2 quote-2'
-      'creations edu edu .'
-      'quote-3 quote-3 quote-3 quote-3'
-      '. vol vol other-skills'
-      '. ref ref .';
+  max-width: 1300px;
+  display: grid;
+  grid-gap: 50px;
+  justify-content: center;
+  grid:
+    "header             header  header  header"
+    ".                  profile profile contact"
+    "hero-1             hero-1  hero-1  hero-1"
+    "quote-1            quote-1 quote-1 quote-1"
+    "rel-skills         work    work    ."
+    "hero-2             hero-2  hero-2  hero-2"
+    "quote-2            quote-2 quote-2 quote-2"
+    "creations          edu     edu     ."
+    "quote-3            quote-3 quote-3 quote-3"
+    ".                  vol     vol     other-skills"
+    ".                  ref     ref     ." /
+    minmax(auto, 230px) 1fr 1fr minmax(auto, 230px);
 
-    @include breakpoint(tablet) {
-      overflow-x: hidden; //Fix for horizontal scroll when using AOS
-      margin: 50px auto;
-      grid-template-columns: 1fr 1fr;
+  @include breakpoint(tablet) {
+    overflow-x: hidden; // Hide horisontal scroll with AOS
+    margin: 50px auto;
+    grid:
+      "header     header"
+      "profile    profile"
+      "contact    contact"
+      "hero-1     hero-1"
+      "quote-1    quote-1"
+      "work       work"
+      "hero-2     hero-2"
+      "rel-skills other-skills"
+      "quote-2    quote-2"
+      "edu        edu"
+      "quote-3    quote-3"
+      "vol        vol"
+      "ref        ref"
+      "creations  creations" /
+      1fr 1fr;
+  }
 
-      grid-template-areas:
-        'header header'
-        'profile profile'
-        'contact contact'
-        'hero-1 hero-1'
-        'quote-1 quote-1'
-        'work work'
-        'hero-2 hero-2'
-        'relevant-skills other-skills'
-        'quote-2 quote-2'
-        'edu edu'
-        'quote-3 quote-3'
-        'vol vol'
-        'ref ref'
-        'creations creations';
-    }
-    @include breakpoint(smartphone-big) {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        'header'
-        'profile'
-        'contact'
-        'hero-1'
-        'quote-1'
-        'work'
-        'hero-2'
-        'relevant-skills'
-        'other-skills'
-        'quote-2'
-        'edu'
-        'quote-3'
-        'vol'
-        'ref'
-        'creations';
-    }
+  @include breakpoint(smartphone-big) {
+    grid:
+      "header"
+      "profile"
+      "contact"
+      "hero-1"
+      "quote-1"
+      "work"
+      "hero-2"
+      "rel-skills"
+      "other-skills"
+      "quote-2"
+      "edu"
+      "quote-3"
+      "vol"
+      "ref"
+      "creations" /
+      1fr;
   }
 }
-.profile,
-.letter {
+
+.profile {
   max-width: 600px;
   text-align: justify;
   margin: auto;
-  @include breakpoint(tablet) {
-    padding: 0 2em;
-  }
-}
-.profile,
-.letter {
   grid-area: profile;
-  p {
-    margin: 1em 0;
+
+  img:last-of-type {
+    transform: rotate(-4deg);
+    width: 200px;
+    margin-top: 50px;
+
+    @include breakpoint(smartphone-big) {
+      width: 150px;
+    }
   }
 }
 
-.experience {
-  text-align: center;
-}
-.work.experience {
-  grid-area: work;
-}
-.education.experience {
-  grid-area: edu;
-}
+section {
+  padding: 2em;
 
-.volunteer.experience {
-  grid-area: vol;
-}
-.references.experience {
-  grid-area: ref;
-}
-
-.date {
-  font-size: 1em;
-  color: $second-font-color;
-  @include breakpoint(smartphone-big) {
-    font-size: 0.8em;
+  &.experience {
+    text-align: center;
+    &.work {
+      grid-area: work;
+    }
+    &.education {
+      grid-area: edu;
+    }
+    &.volunteer {
+      grid-area: vol;
+    }
+    &.references {
+      grid-area: ref;
+    }
   }
 }
-
-// Print layout tweaks
-@import 'print';
